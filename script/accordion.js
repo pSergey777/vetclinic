@@ -19,6 +19,19 @@ for (i = 0; i < acc.length; i++) {
     });
 }
 
+// let accAll = document.querySelectorAll('.accordion')
 
+// accAll.forEach(item => {
+//     item.addEventListener('click', e => {
+//     if (e.target.classList.contains('active')) {
+//         e.target.classList.toggle('active');   
+//         console.log('ewew'); 
+//       return;
+//     }
+//     accAll.forEach(e=>e.classList.remove('active'));
+//     e.target.classList.toggle('active');
+//     console.log(accAll);
+//   });
+// });
 
 

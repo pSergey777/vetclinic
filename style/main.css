@@ -1,5 +1,6 @@
 .medical-care_heading,
-.grooming-heading {
+.grooming-heading,
+.staff-heading {
   display: flex;
   justify-content: space-between;
   align-items: end;
@@ -8,7 +9,8 @@
 }
 
 .medical-care_heading h2,
-.grooming-heading h2 {
+.grooming-heading h2,
+.staff-heading h2 {
   color: var(--text, #575757);
   font-size: 48px;
   font-style: normal;
@@ -146,14 +148,6 @@
   font-size: 16px;
 }
 
-.accordion-arrow::before {
-  color: var(--white, #FFF);
-}
-
-.grooming {
-  margin-top: 140px;
-}
-
 .grooming-heading p {
   margin-left: 28px;
 }
@@ -161,7 +155,6 @@
 .grooming-wrapper {
   margin-top: 70px;
   display: flex;
-  align-items: center;
   justify-content: center;
 }
 
@@ -202,4 +195,66 @@
 
 .grooming-img img {
   width: 100%;
+  position: static;
+}
+
+.staff {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.staff-cards {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 70px;
+}
+
+.staff-card {
+  display: flex;
+  flex-direction: column;
+  width: 395px;
+  height: 319px;
+  justify-content: space-evenly;
+  border-radius: 12px;
+  background: #FFF;
+}
+
+.staff-card_header {
+  display: flex;
+  align-items: center;
+}
+
+.staff-card_header__name {
+  margin-left: 8px;
+}
+
+.staff-card ul {
+  display: flex;
+  flex-direction: column;
+}
+
+.staff-card li {
+  margin-top: 24px;
+  font-size: 16px;
+  margin-left: 25px;
+}
+
+.staff button {
+  display: flex;
+  width: 209px;
+  height: 55px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 7px;
+  flex-shrink: 0;
+  border-radius: 12px;
+  background: var(--akcent, #20BBFE);
+  color: #ffffff;
+  border: none;
+  margin-top: 40px;
+  cursor: pointer;
 }/*# sourceMappingURL=main.css.map */
