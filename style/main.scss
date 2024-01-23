@@ -275,6 +275,141 @@ flex-direction: column;
     cursor: pointer;
 }
 
+.feedback{
+    width: 100%;
+    height: 816px;
+    background: var(--akcent, #20BBFE);
+    margin-top: 102px;
+}
+
+.feedback-header{
+    display: flex;
+    align-items: baseline;
+    padding-top: 130px;
+}
+
+.feedback-header h2{
+    color: #FFF;
+    font-size: 48px;
+}
+
+.feedback-header_text{
+    margin-top: 60px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    color: var(--white, #FFF);
+}
+
+.feedback-header_text p{
+    cursor: pointer;
+    color: var(--white, #FFF);
+}
+
+.feedback-header_text svg{
+margin-left: 8px;
+}
+
+
+.swiper {
+    margin-top: 36px;
+    width: 100%;
+    height: 378px;
+}
+
+.swiper-container {
+
+  }
+
+.swiper-slide{
+width: 580px !important;
+border-radius: 20px;
+background: var(--white, #FFF);
+margin-right: 9px;
+height: 378px;
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+
+.swiper-slide_names{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 35px;
+}
+
+.swiper-slide_names__info{
+    display: flex;
+    align-items: center;
+}
+
+.swiper-slide_names__info img{
+margin-right: 15px;
+}
+
+.swiper-slide_raiting{
+    display: flex;
+    margin: 64px 0 0 36px;
+}
+
+// ------------------------ Stars
+.raiting {
+
+    height: 18px;
+    display: flex;
+    margin: 0 13px 0 0;
+    align-items: center;
+    text-align: center;
+
+    .stars{
+          height: 100%;
+          .rating-wrapper {
+
+    
+            label {
+                color: gold;
+                display: inline-flex;
+                font-size: 18px;
+                padding: 1px;
+            }
+            
+             svg {
+               -webkit-text-fill-color: transparent;
+               -webkit-filter: drop-shadow (4px 1px 6px rgb(139, 139, 139));
+               filter:drop-shadow(5px 1px 3px rgb(106, 106, 106));
+            }
+          
+            input {
+              height: 100%;
+              width: 100%;
+            }
+            
+            input {
+              display: none;
+            }
+          
+            label:hover,
+            label:hover ~ label,
+            input:checked ~ label  {
+              color: #34AC9E;
+            }
+          
+            label:hover,
+            label:hover ~ label,
+            input:checked ~ label  {
+            color: gold;
+            };
+          };
+    };
+}
+// ------------
+
+.swiper-slide_feedback{
+    margin: 21px 0 0 36px;
+}
+
+
+
 
 
 

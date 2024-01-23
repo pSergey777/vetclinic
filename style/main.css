@@ -257,4 +257,118 @@
   border: none;
   margin-top: 40px;
   cursor: pointer;
+}
+
+.feedback {
+  width: 100%;
+  height: 816px;
+  background: var(--akcent, #20BBFE);
+  margin-top: 102px;
+}
+
+.feedback-header {
+  display: flex;
+  align-items: baseline;
+  padding-top: 130px;
+}
+
+.feedback-header h2 {
+  color: #FFF;
+  font-size: 48px;
+}
+
+.feedback-header_text {
+  margin-top: 60px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  color: var(--white, #FFF);
+}
+
+.feedback-header_text p {
+  cursor: pointer;
+  color: var(--white, #FFF);
+}
+
+.feedback-header_text svg {
+  margin-left: 8px;
+}
+
+.swiper {
+  margin-top: 36px;
+  width: 100%;
+  height: 378px;
+}
+
+.swiper-slide {
+  width: 580px !important;
+  border-radius: 20px;
+  background: var(--white, #FFF);
+  margin-right: 9px;
+  height: 378px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.swiper-slide_names {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 35px;
+}
+
+.swiper-slide_names__info {
+  display: flex;
+  align-items: center;
+}
+
+.swiper-slide_names__info img {
+  margin-right: 15px;
+}
+
+.swiper-slide_raiting {
+  display: flex;
+  margin: 64px 0 0 36px;
+}
+
+.raiting {
+  height: 18px;
+  display: flex;
+  margin: 0 13px 0 0;
+  align-items: center;
+  text-align: center;
+}
+.raiting .stars {
+  height: 100%;
+}
+.raiting .stars .rating-wrapper label {
+  color: gold;
+  display: inline-flex;
+  font-size: 18px;
+  padding: 1px;
+}
+.raiting .stars .rating-wrapper svg {
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(5px 1px 3px rgb(106, 106, 106));
+}
+.raiting .stars .rating-wrapper input {
+  height: 100%;
+  width: 100%;
+}
+.raiting .stars .rating-wrapper input {
+  display: none;
+}
+.raiting .stars .rating-wrapper label:hover,
+.raiting .stars .rating-wrapper label:hover ~ label,
+.raiting .stars .rating-wrapper input:checked ~ label {
+  color: #34AC9E;
+}
+.raiting .stars .rating-wrapper label:hover,
+.raiting .stars .rating-wrapper label:hover ~ label,
+.raiting .stars .rating-wrapper input:checked ~ label {
+  color: gold;
+}
+
+.swiper-slide_feedback {
+  margin: 21px 0 0 36px;
 }/*# sourceMappingURL=main.css.map */
