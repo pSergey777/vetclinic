@@ -1,6 +1,9 @@
 .medical-care_heading,
 .grooming-heading,
-.staff-heading {
+.staff-heading,
+.feedback-header,
+.faq-header,
+.contacts-header {
   display: flex;
   justify-content: space-between;
   align-items: end;
@@ -10,7 +13,10 @@
 
 .medical-care_heading h2,
 .grooming-heading h2,
-.staff-heading h2 {
+.staff-heading h2,
+.feedback-header h2,
+.faq-header h2,
+.contacts-header h2 {
   color: var(--text, #575757);
   font-size: 48px;
   font-style: normal;
@@ -105,6 +111,7 @@
   justify-content: center;
   border-radius: 102px;
   margin-left: 50px;
+  z-index: 10;
 }
 
 .services-panel {
@@ -390,4 +397,102 @@
   flex-shrink: 0 !important;
   border-radius: 8px !important;
   background: #ffffff !important;
+}
+
+.faq-wrapper {
+  display: flex;
+  margin-top: 70px;
+  justify-content: space-around;
+}
+
+.faq-accordion {
+  width: 796px;
+  margin-left: 8px;
+}
+
+.faq-accordion_panel {
+  color: var(--white, #FFF);
+}
+
+.faq-accordion_text {
+  font-size: 22px;
+}
+
+.contacts-wrapper {
+  height: 511px;
+  margin-top: 70px;
+  border-radius: 12px;
+  border: 1px solid var(--akcent, #20BBFE);
+  background: url("/img/bg_vector_two.png") no-repeat, var(--akcent, #20BBFE);
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.contacts-wrapper_form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 47px;
+}
+
+.contacts-wrapper_form p {
+  font-size: 14px;
+  color: var(--white, #FFF);
+  margin-bottom: 34px;
+}
+
+.contacts-wrapper_form input,
+.contacts-wrapper_form select,
+.contacts-wrapper_form button {
+  display: flex;
+  width: 394px;
+  height: 56px;
+  border-radius: 12px;
+  background: var(--white, #FFF);
+  border: none;
+  margin-bottom: 21px;
+  padding-left: 23px;
+}
+
+.contacts-wrapper_form input::-moz-placeholder {
+  color: #AEAEAE;
+}
+
+.contacts-wrapper_form input::placeholder {
+  color: #AEAEAE;
+}
+
+.contacts-wrapper_form select {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  color: #AEAEAE;
+  background: url(/img/arr_down__down.svg) no-repeat right, var(--white, #FFF);
+  background-position-x: calc(100% - 20px);
+}
+
+.contacts-wrapper_form option {
+  color: black;
+  border-radius: 12px;
+}
+
+.contacts-wrapper_form button {
+  margin-top: 43px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 12px;
+  background: var(--akcent, #20BBFE);
+  border: 3px solid #FFF;
+  color: var(--white, #FFF);
+  padding-left: 0;
+}
+
+.contacts-wrapper_map {
+  width: 680px;
+  height: 479px;
+  margin-right: 16px;
 }/*# sourceMappingURL=main.css.map */

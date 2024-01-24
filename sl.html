@@ -8,96 +8,57 @@
 </head>
 <body>
     
-    <div class="swiper-container">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide">Слайд 1</div>
-          <div class="swiper-slide">Слайд 2</div>
-          <div class="swiper-slide">Слайд 3</div>
-          <div class="swiper-slide">Слайд 4</div>
-          <div class="swiper-slide">Слайд 5</div>
-          <div class="swiper-slide">Слайд 6</div>
-        </div>
-        <div class="pagination"></div>
-      </div>
+  <div class="accordion">
+    <div class="menu" onclick="toggleAccordion(1)">Меню 1</div>
+    <div class="panel">Содержание меню 1</div>
+    <div class="menu" onclick="toggleAccordion(2)">Меню 2</div>
+    <div class="panel">Содержание меню 2</div>
+    <!-- Добавьте другие меню по аналогии -->
+  </div>
 
 
 
     <style>
-  .swiper-container {
-  width: 100%;
+.accordion {
   overflow: hidden;
-  position: relative;
 }
 
-.swiper-wrapper {
-  display: flex;
-  transition: transform 0.3s;
-}
-
-.swiper-slide {
-  flex: 0 0 50%; /* Для отображения по два */
-  box-sizing: border-box;
-  padding: 10px;
-}
-
-.pagination {
-  display: flex;
-  justify-content: center;
-  margin-top: 10px;
-}
-
-.pagination-dot {
-  width: 8px;
-  height: 8px;
-  margin: 0 5px;
-  border-radius: 50%;
-  background-color: #000;
+.menu {
   cursor: pointer;
+  background-color: lightgray;
+  padding: 10px;
+  margin: 5px;
+}
+
+.panel {
+  padding: 10px;
+  display: none;
 }
       </style>
 
 
 
 
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
 
 <script>
-const swiperWrapper = document.querySelector('.swiper-wrapper');
-const pagination = document.querySelector('.pagination');
 
-// Определяем количество слайдов
-const slideCount = document.querySelectorAll('.swiper-slide').length;
-
-// Определяем количество видимых слайдов
-const slidesPerView = 4;
-
-// Определяем текущую страницу
-let currentPage = 1;
-
-// Создаем пагинацию
-for (let i = 0; i < slideCount; i += slidesPerView) {
-  const dot = document.createElement('div');
-  dot.classList.add('pagination-dot');
-  dot.dataset.page = Math.floor(i / slidesPerView) + 1;
-  dot.addEventListener('click', () => {
-    currentPage = dot.dataset.page;
-    updateSwiperPosition();
+function toggleAccordion(index) {
+  var panels = document.querySelectorAll(".panel");
+  panels.forEach(function(panel, i) {
+    if(i+1 === index) {
+      if (panel.style.display === "block") {
+        panel.style.display = "none";
+      } else {
+        panel.style.display = "block";
+      }
+    } else {
+      panel.style.display = "none";
+    }
   });
-  pagination.appendChild(dot);
 }
 
-// Обновляем положение свайпера
-function updateSwiperPosition() {
-  const newPosition = -((currentPage - 1) * (100 / slidesPerView)) + '%';
-  swiperWrapper.style.transform = 'translateX(' + newPosition + ')';
-}
-
-// Первоначальное установление положения и размеров
-updateSwiperPosition();
-
-// Опционально: добавление затемнения по краям
-swiperWrapper.style.maskImage = 'linear-gradient(to left, rgba(0,0,0,0), rgba(0,0,0,1) 10%, rgba(0,0,0,1) 90%, rgba(0,0,0,0))';
-  </script>
+</script>
 
 
 
