@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .medical-care_heading,
 .grooming-heading,
 .staff-heading,
@@ -16,7 +17,9 @@
 .staff-heading h2,
 .feedback-header h2,
 .faq-header h2,
-.contacts-header h2 {
+.contacts-header h2,
+.faq h2,
+.contacts h2 {
   color: var(--text, #575757);
   font-size: 48px;
   font-style: normal;
@@ -495,4 +498,217 @@
   width: 680px;
   height: 479px;
   margin-right: 16px;
+}
+
+@media screen and (max-width: 1199.98px) {
+  .medical-care_heading,
+  .grooming-heading,
+  .staff-heading,
+  .feedback-header,
+  .faq-header,
+  .contacts-header,
+  .contacts {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: self-start;
+    margin-top: 54px;
+  }
+  .medical-care_heading h2,
+  .grooming-heading h2,
+  .staff-heading h2,
+  .feedback-header h2,
+  .faq-header h2,
+  .contacts-header h2,
+  .faq h2,
+  .contacts h2 {
+    color: var(--text, #575757);
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 120%;
+  }
+  .consultations h3, .services h3 {
+    margin: 34px 0 0px 21px;
+  }
+  .services h3 {
+    width: auto;
+  }
+  .medical-care_heading__span {
+    color: var(--akcent, #20BBFE);
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 120%;
+  }
+  .medical-care {
+    display: flex;
+    flex-direction: column;
+  }
+  .consultations {
+    width: 370px;
+    height: 534px;
+    background-repeat: no-repeat, no-repeat;
+    background-position: bottom, bottom;
+    background-size: 90%;
+  }
+  .services {
+    width: 370px;
+  }
+  .services img {
+    display: none;
+  }
+  .services-accordion {
+    margin: 53px 0 0 22px;
+    max-width: 326px;
+  }
+  .consultations span {
+    display: none;
+  }
+  .consultations h3:after {
+    content: "Кошки";
+  }
+  .consultations p {
+    margin: 12px 0 0 21px;
+  }
+  .consultations-dots {
+    bottom: 34px;
+    right: 34px;
+    left: auto;
+  }
+  .consultations-dots span {
+    display: block;
+  }
+  .services-accordion button {
+    padding: 18px;
+    background: #FFF;
+  }
+  .services-panel {
+    background: #FFF;
+    color: var(--gray-text, #AEAEAE);
+  }
+  .services-panel p {
+    background: #FFF;
+    color: var(--gray-text, #AEAEAE);
+    width: auto;
+  }
+  .accordion-arrow_open {
+    background: #FFF;
+    color: var(--gray-text, #AEAEAE);
+  }
+  .grooming {
+    display: flex;
+    flex-direction: column;
+  }
+  .grooming-wrapper {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .medical-care_heading p,
+  .grooming-heading p {
+    font-size: 14px;
+    margin-left: 0;
+  }
+  .grooming-img {
+    width: 370px;
+    height: 376px;
+  }
+  .grooming-accordion {
+    display: flex;
+    width: 370px;
+    align-items: center;
+    margin: 0;
+  }
+  .grooming-accordion_h3 {
+    font-size: 16px;
+    color: var(--text, #656565);
+  }
+  .grooming-accordion img {
+    display: none;
+  }
+  .staff-cards {
+    display: flex;
+    flex-direction: column;
+  }
+  .staff-card {
+    width: 370px;
+    height: 319px;
+    margin-top: 78px;
+  }
+  .staff-card:first-of-type {
+    margin-top: 34px;
+  }
+  .staff-card_header__name h4 {
+    font-size: 16px;
+  }
+  .staff-card_header__name p {
+    font-size: 14px;
+  }
+  .staff button {
+    display: none;
+  }
+  .feedback {
+    display: none;
+  }
+  .faq {
+    display: flex;
+    flex-direction: column;
+  }
+  .faq-header {
+    justify-content: center;
+  }
+  .faq-wrapper {
+    display: flex;
+    flex-direction: column;
+    margin-top: 18px;
+  }
+  .faq-form_reptile {
+    width: 370px;
+    height: 376px;
+  }
+  .faq-accordion {
+    width: 370px;
+    margin: 8px 0 0 0;
+  }
+  .faq-accordion img {
+    display: none;
+  }
+  .contacts-header {
+    margin: 0;
+  }
+  .contacts-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 370px;
+    height: auto;
+  }
+  .contacts-wrapper_form {
+    margin-left: auto;
+    max-width: 100%;
+  }
+  .contacts-wrapper_form form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 100%;
+  }
+  .contacts-wrapper_form p {
+    margin: 47px 0 0 0;
+  }
+  .contacts-wrapper form {
+    margin-top: 26px;
+  }
+  .contacts-wrapper input,
+  .contacts-wrapper select {
+    max-width: 88%;
+  }
+  .contacts-wrapper_form button {
+    max-width: 88%;
+  }
+  .contacts-wrapper_map {
+    max-width: 328px;
+    padding-bottom: 21px;
+    border-radius: 12px;
+    margin: 0;
+  }
 }/*# sourceMappingURL=main.css.map */

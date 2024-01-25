@@ -1,68 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/style/main.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <title>Document</title>
 </head>
+
 <body>
-    
-  <div class="accordion">
-    <div class="menu" onclick="toggleAccordion(1)">Меню 1</div>
-    <div class="panel">Содержание меню 1</div>
-    <div class="menu" onclick="toggleAccordion(2)">Меню 2</div>
-    <div class="panel">Содержание меню 2</div>
+
+  <div class="grooming-accordion services-accordion">
+    <div class="accordion accordion-arrow grooming-accordion_h3" onclick="toggleAccordion(1)">Экспресс-линька</div>
+    <div class="services-panel grooming-accordion_panel">
+      <p>Процедура для быстрого и эффективного удаления подшерстка у животных, которые находятся в
+        период линьки. Позволяет быстро освежить питомца, уменьшив количество шерсти, которая
+        ежедневно осыпается по дому.</p>
+    </div>
+    <div class="accordion" onclick="toggleAccordion(2)">Меню 2</div>
+    <div class="services-panel grooming-accordion_panel">Содержание меню 2</div>
     <!-- Добавьте другие меню по аналогии -->
   </div>
 
 
 
-    <style>
-.accordion {
-  overflow: hidden;
-}
-
-.menu {
-  cursor: pointer;
-  background-color: lightgray;
-  padding: 10px;
-  margin: 5px;
-}
-
-.panel {
-  padding: 10px;
-  display: none;
-}
-      </style>
-
-
-
-
-
-
-<script>
-
-function toggleAccordion(index) {
-  var panels = document.querySelectorAll(".panel");
-  panels.forEach(function(panel, i) {
-    if(i+1 === index) {
-      if (panel.style.display === "block") {
-        panel.style.display = "none";
-      } else {
-        panel.style.display = "block";
-      }
-    } else {
-      panel.style.display = "none";
+  <style>
+    .accordion {
+      overflow: hidden;
     }
-  });
+
+    .menu {
+      cursor: pointer;
+      background-color: lightgray;
+      margin: 5px;
+      display: flex;
+      width: 696px;
+      padding: 24px 157px 24px 40px;
+      align-items: center;
+      gap: 10px;
+      flex-shrink: 0;
+    }
+
+    .panel {
+      padding: 10px;
+      display: none;
+      width: 696px;
+    height: 92px;
+    }
+  </style>
+
+
+
+
+
+
+  <script>
+
+const acc = document.getElementsByClassName("accordion");
+let i;
+
+for (i = 0; i < acc.length; i++) {
+    acc[i].addEventListener("click", function() {
+        this.classList.toggle("accordion-active");
+        const accArr = this.querySelector('.accordion-arrow')
+        accArr.classList.toggle("accordion-arrow_open")
+        const accImg = this.querySelector('img')
+        const panel = this.nextElementSibling;
+        
+
+
+
+
+        if (panel.style.display === "block") {
+            panel.style.display = "none";
+            accImg.src="/img/Arrow.svg"
+        } else {
+            panel.style.display = "none";
+            accImg.src="/img/Arrow_down.svg"
+        }
+    });
 }
 
-</script>
+    // function toggleAccordion(index) {
+    //   let panels = document.querySelectorAll(".grooming-accordion_panel");
+    //   panels.forEach(function (panel, i) {
+    //     if (i + 1 === index) {
+    //       if (panel.style.display === "block") {
+    //         panel.style.display = "none";
+    //       } else {
+    //         panel.style.display = "block";
+    //       }
+    //     } else {
+    //       panel.style.display = "none";
+    //     }
+    //   });
+    // }
+
+  </script>
 
 
 
 
 
 </body>
+
 </html>

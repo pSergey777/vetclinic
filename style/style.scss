@@ -9,6 +9,7 @@ body{
 
 }
 
+
 .container{
     width: 1200px;
     display: flex;
@@ -33,3 +34,20 @@ p{
 //     display: block;
 // }
 
+@media screen and (max-width: 1199.98px) {
+// @media screen and (max-width: 768px) {
+
+
+h1{
+font-size: 26px;
+font-style: normal;
+font-weight: 500;
+line-height: 120%;
+}
+
+p{
+    font-size: 16px;
+font-style: normal;
+font-weight: 400;
+}
+}

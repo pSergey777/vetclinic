@@ -41,11 +41,15 @@ header {
   width: 100%;
 }
 
+.header-middle_mobile {
+  display: none;
+}
+
 .header-middle h1 {
   position: inherit;
   margin-top: 69px;
   margin-left: 51px;
-  width: 610px;
+  max-width: 610px;
   z-index: 1;
   font-size: 53px;
   font-weight: 700;
@@ -134,7 +138,7 @@ header {
   position: absolute;
   bottom: 0;
   right: 0;
-  padding: 30px;
+  margin: 30px;
 }
 
 .header-middle_img {
@@ -191,4 +195,77 @@ header {
   flex-shrink: 0;
   border-radius: 8px;
   background: #FFF;
+}
+
+@media screen and (max-width: 1199.98px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 100% !important;
+  }
+  header {
+    display: flex;
+    align-items: center;
+  }
+  .header-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .header-top nav {
+    content: url("/img/burger.svg");
+  }
+  .header-top img {
+    width: 94.946px;
+    height: 42.804px;
+  }
+  .header-top a:last-child {
+    display: none;
+  }
+  .header-middle {
+    align-items: center;
+  }
+  .header-middle h1 {
+    margin: 35px 0 0 0;
+    font-size: 26px;
+    width: 100%;
+  }
+  .header-middle p {
+    margin-top: 37px;
+    margin-left: 0;
+    align-self: start;
+  }
+  .header-middle_mobile {
+    display: block;
+    font-size: 26px;
+  }
+  .header-middle_img {
+    display: none;
+  }
+  .header-middle button {
+    margin-left: 0;
+    width: 326px;
+    height: 55px;
+  }
+  .header-bottom {
+    margin-top: 65px;
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+  .header-bottom_info__price,
+  .header-bottom_info__appointment,
+  .header-bottom_info__sale {
+    width: 370px;
+  }
+  .header-bottom_info__price h3,
+  .header-bottom_info__appointment h3,
+  .header-bottom_info__sale h3 {
+    padding: 25px;
+  }
+  .header-bottom_info__price p,
+  .header-bottom_info__appointment p,
+  .header-bottom_info__sale p {
+    padding: 25px;
+  }
 }/*# sourceMappingURL=header.css.map */
