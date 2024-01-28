@@ -1,7 +1,8 @@
 var swiper = new Swiper(".mySwiper", {
-    slidesPerView: 3,
+  slidesPerView:1,
+  centeredSlides: true,
     spaceBetween: 30,
-    freeMode: true,
+    // freeMode: true,
     // effect: 'coverflow',
 
     pagination: {

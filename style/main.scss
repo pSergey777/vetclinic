@@ -160,6 +160,7 @@ margin: 36px 0 0 43px;
     justify-content: space-between;
     color: var(--gray-text, #AEAEAE);
     font-size: 16px;
+    margin-right: 27px;
 }
 
 
@@ -330,12 +331,18 @@ margin-left: 8px;
     width: 100%;
     height: 378px;
     position:static !important;
+
 }
+
 
 // .swiper-wrapper {
 
 //     padding-bottom: 147px;
 // }
+
+.swiper-wrapper::before{
+    background: rgba(0,0,0,0.5);
+}
 
 .swiper-slide{
 width: 580px !important;
@@ -533,6 +540,13 @@ padding-left: 0;
     margin-right: 16px;
 }
 
+
+@media (min-width: 769px) and (max-width: 1199.98px)  {
+    .medical-care_heading,
+    .staff-heading{
+        align-items: center !important;
+    }
+  }
 
 
 @media screen and (max-width: 1199.98px) {

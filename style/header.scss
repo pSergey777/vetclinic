@@ -206,6 +206,7 @@ color: #FFF;
   }
 
 
+
   @media screen and (max-width: 1199.98px) {
     // @media screen and (max-width: 768px) {
 
@@ -299,3 +300,10 @@ height: 55px;
 
 };
 
+@media (min-width: 769px) and (max-width: 1199.98px)  {
+    .header-middle p{
+
+        align-self: center;
+        align-items: center;
+    }
+  }

@@ -1,7 +1,6 @@
 const acc = document.getElementsByClassName("accordion");
-const groo  =document.querySelectorAll('.grooming-accordion_panel')
-console.log(groo);
-let i;
+const groo = document.querySelectorAll('.grooming-accordion_panel')
+// let i;
 
 for (i = 0; i < acc.length; i++) {
     acc[i].addEventListener("click", function() {
@@ -28,7 +27,29 @@ for (i = 0; i < acc.length; i++) {
     });
 }
 
-
+// function toggleAccordion(select) {
+//     var panels = document.querySelectorAll(".accordion");
+//     panels.forEach(function(panel, i) {
+//       if (i+1 === parseInt(select.value)) {
+//         panel.style.display = "block";
+//         panel.classList.add('open');
+//       } else {
+//         panel.style.display = "none";
+//         panel.classList.remove('open');
+//       }
+//     });
+//   }
+  
+//   document.addEventListener('click', function (event) {
+//     var target = event.target;
+//     if (!target.closest('.accordion')) {
+//       var openPanels = document.querySelectorAll('.services-panel');
+//       openPanels.forEach(function(panel) {
+//         panel.style.display = "none";
+//         panel.classList.remove('open');
+//       });
+//     }
+//   });
 
 
 
