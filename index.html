@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="/style/carousel.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Condensed&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
@@ -23,7 +23,7 @@
 
 <body>
     <header>
-        <div class="container">
+        <div class="container" >
             <div class="header-top">
                 <a href="#">
                     <img src="/img/logo.png" alt="logo">
@@ -88,7 +88,7 @@
     </header>
 
     <main>
-        <div class="container">
+        <div class="container" id="target-block">
             <div class="medical-care_heading">
                 <h2>Профессиональная <br> <span class="medical-care_heading__span">медицинская помощь</span></h2>
                 <p>Залог успеха профилактика, а не лечение! <br> Предотвратить болезнь дешевле, чем ее лечить.</p>
@@ -267,7 +267,10 @@
 
                 </div>
             </div>
-            <div class="swiper mySwiper">
+            
+            <div class="swiper mySwiper"> 
+                <div class="swiper-bg_left"></div>
+                <div class="swiper-bg_right"></div>         
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
                         <div class="swiper-slide">
@@ -535,8 +538,14 @@
                             </div>
                         </div>
                     </div>
+                    <!-- <div class="swiper-bg">
+                        <div class="swiper-bg_left"></div>
+                        <div class="swiper-bg_right"></div>
+                    </div> -->
+
                 </div>
                 <div class="swiper-pagination"></div>
+
             </div>
         </div>
         <div class="container">
