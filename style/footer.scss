@@ -74,6 +74,9 @@ footer{
     height: auto;
     margin-bottom: 0 !important;
 padding-bottom: 107px;
+margin-top: 54px !important;
+background: url(/img/mob/footer_bg.png) no-repeat bottom, var(--akcent, #20BBFE);
+    background-size: contain;
 }
     
 .footer-wrapper{

@@ -566,14 +566,14 @@
   .staff-heading,
   .feedback-header,
   .faq-header,
-  .contacts-header,
-  .contacts,
-  .services {
+  .contacts-header {
     display: flex;
     justify-content: space-between;
     flex-direction: column;
     align-items: self-start;
     margin-top: 54px;
+    margin-left: 22px;
+    width: auto;
   }
   .medical-care_heading h2,
   .grooming-heading h2,
@@ -582,8 +582,7 @@
   .faq-header h2,
   .contacts-header h2,
   .faq h2,
-  .contacts h2,
-  .services {
+  .contacts h2 {
     color: var(--text, #575757);
     font-size: 22px;
     font-style: normal;
@@ -604,6 +603,7 @@
     display: flex;
     flex-direction: column;
     width: 100%;
+    margin-top: 0;
   }
   .consultations {
     width: inherit;
@@ -625,7 +625,9 @@
   }
   .services-accordion {
     margin: 53px 0 0 22px;
-    max-width: 326px;
+    max-width: 100%;
+    width: auto;
+    margin-left: 0;
   }
   .consultations span {
     display: none;
@@ -646,20 +648,12 @@
   }
   .services-accordion button {
     padding: 18px;
-    background: #FFF;
   }
   .services-panel {
-    background: #FFF;
-    color: var(--gray-text, #AEAEAE);
+    width: 100%;
   }
   .services-panel p {
-    background: #FFF;
-    color: var(--gray-text, #AEAEAE);
-    width: auto;
-  }
-  .accordion-arrow_open {
-    background: #FFF;
-    color: var(--gray-text, #AEAEAE);
+    width: 100%;
   }
   .grooming {
     display: flex;
@@ -669,6 +663,7 @@
   .grooming-wrapper {
     display: flex;
     flex-direction: column-reverse;
+    margin-top: 0;
   }
   .medical-care_heading p,
   .grooming-heading p {
@@ -688,7 +683,6 @@
   }
   .grooming-accordion_h3 {
     font-size: 16px;
-    color: var(--text, #656565);
   }
   .grooming-accordion img {
     display: none;
@@ -697,6 +691,7 @@
     display: flex;
     flex-direction: column;
     max-width: 100%;
+    margin-top: 0;
   }
   .staff-card {
     max-width: 100%;
@@ -747,16 +742,27 @@
     display: none;
   }
   .contacts {
+    display: flex;
+    flex-direction: column;
     max-width: 100%;
+    margin-top: 54px;
   }
   .contacts-header {
-    margin: 0;
+    margin-top: 0;
+    width: auto;
+  }
+  .contacts-header p {
+    max-width: 100%;
   }
   .contacts-wrapper {
     display: flex;
     flex-direction: column;
     max-width: 100%;
     height: auto;
+    margin-top: 0;
+    border: none;
+    background: url(/img/mob/contacts_bg.png) no-repeat top, var(--akcent, #20BBFE);
+    background-size: contain;
   }
   .contacts-wrapper_form {
     margin-left: auto;
