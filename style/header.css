@@ -195,7 +195,6 @@ header {
   flex-shrink: 0;
   border-radius: 8px;
   background: #FFF;
-  margin-right: 5;
 }
 
 @media screen and (max-width: 1199.98px) {
@@ -253,11 +252,13 @@ header {
     margin-top: 65px;
     flex-direction: column-reverse;
     align-items: center;
+    max-width: 100%;
   }
   .header-bottom_info__price,
   .header-bottom_info__appointment,
   .header-bottom_info__sale {
-    width: 370px;
+    max-width: 100%;
+    margin-right: 0px;
   }
   .header-bottom_info__price h3,
   .header-bottom_info__appointment h3,
