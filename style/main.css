@@ -177,6 +177,7 @@
 
 .grooming-accordion {
   width: 696px;
+  margin-right: 8px;
 }
 
 .grooming-accordion_h3 {
@@ -268,11 +269,12 @@
   border: none;
   margin-top: 40px;
   cursor: pointer;
+  margin-top: 98px;
 }
 
 .feedback {
   width: 100%;
-  height: 816px;
+  height: 900px;
   background: var(--akcent, #20BBFE);
   margin-top: 102px;
   z-index: 1;
@@ -412,7 +414,7 @@
 }
 
 .swiper-pagination {
-  bottom: 25px !important;
+  bottom: 100px !important;
 }
 
 .swiper-pagination-bullet {
@@ -432,7 +434,6 @@
 .faq-wrapper {
   display: flex;
   margin-top: 70px;
-  justify-content: space-around;
   position: relative;
 }
 
@@ -463,7 +464,7 @@
 }
 
 .faq-accordion {
-  width: 796px;
+  width: 100%;
   margin-left: 8px;
 }
 
@@ -484,7 +485,7 @@
   background-size: cover;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
 .contacts-wrapper_form {
@@ -551,7 +552,6 @@
 .contacts-wrapper_map {
   width: 680px;
   height: 479px;
-  margin-right: 16px;
 }
 
 @media (min-width: 769px) and (max-width: 1199.98px) {

@@ -190,7 +190,7 @@ height: 92px;
 
 .grooming-accordion {
     width: 696px;
-
+    margin-right: 8px;
 }
 
 .grooming-accordion_h3{
@@ -236,8 +236,8 @@ border-radius: 12px;
     display: flex;
     justify-content: space-between;
     margin-top: 70px;
-
 }
+
 
 .staff-card{
     display: flex;
@@ -284,11 +284,12 @@ flex-direction: column;
     border: none;
     margin-top: 40px;
     cursor: pointer;
+    margin-top: 98px;
 }
 
 .feedback{
     width: 100%;
-    height: 816px;
+    height: 900px;
     background: var(--akcent, #20BBFE);
     margin-top: 102px;
     z-index: 1 ;
@@ -448,7 +449,7 @@ margin-right: 15px;
 }
 
 .swiper-pagination{
-bottom: 25px !important;
+bottom: 100px !important;
 }
 
 .swiper-pagination-bullet {
@@ -469,7 +470,7 @@ bottom: 25px !important;
 .faq-wrapper{
     display: flex;
     margin-top: 70px;
-    justify-content: space-around;
+    // justify-content: start;
     position: relative;
 }
 
@@ -501,7 +502,7 @@ bottom: 25px !important;
     }
 
 .faq-accordion{
-    width: 796px;
+    width: 100%;
     margin-left: 8px;
 }
 
@@ -524,7 +525,7 @@ bottom: 25px !important;
     background-size: cover;
     display: flex;
     align-items: center;
-    justify-content:space-between;
+    justify-content:space-around;
 }
 
 .contacts-wrapper_form{
@@ -585,7 +586,6 @@ padding-left: 0;
 .contacts-wrapper_map{
     width: 680px;
     height: 479px;
-    margin-right: 16px;
 }
 
 
