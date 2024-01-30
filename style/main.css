@@ -219,6 +219,7 @@
   display: flex;
   justify-content: space-between;
   color: var(--white, #FFF);
+  width: 100%;
 }
 
 .grooming-img {
