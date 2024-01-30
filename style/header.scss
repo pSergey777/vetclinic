@@ -161,7 +161,9 @@ padding: 30px;
 
 .header-bottom_info__sale{
     background-color: #20BBFE;
-    background-image: url('/img/bg_vector.png');
+    background-image: url('/img/bg_vector.png') ;
+    background-repeat: no-repeat;
+    background-position: bottom;
     position: relative;
 }
 
@@ -174,6 +176,7 @@ padding: 30px;
 .header-bottom_info__sale h3,
 .header-bottom_info__sale p {
 color: #FFF;
+margin-bottom: 0;
 }
 
   .dots {
