@@ -7,7 +7,7 @@ header{
 .header-top{
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
     width: 100%;
 }
 
@@ -15,10 +15,15 @@ header{
     display: flex;
 }
 
-.header-top p{
-    margin-right: 34px;
+.header-top a{
+    margin: 0;
     cursor: pointer;
     height: 11px;
+}
+
+.header-top p{
+    margin: 0;
+
 }
 
 .header-top img{
@@ -31,6 +36,7 @@ header{
     text-decoration: none;
     color: var(--gray-text, #AEAEAE);
     cursor: pointer;
+    margin-left: 50px;
 }
 
 
@@ -40,8 +46,8 @@ header{
     position: relative;
     display: flex;
     flex-direction: column;
-    justify-content:space-between;
     width: 100%;
+    height: 562px;
 }
 
 .header-middle_mobile{
@@ -67,30 +73,41 @@ header{
     margin-top: 0px;
 }
 
-.header-middle button{
+.header-middle button {
     display: flex;
-width: 209px;
-height: 55px;
-flex-direction: column;
-justify-content: center;
-align-items: center;
-gap: 7px;
-flex-shrink: 0;
+    width: 209px;
+    height: 55px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 7px;
+    flex-shrink: 0;
     border-radius: 12px;
-    background: var(--akcent, #20BBFE);
     margin: 58px 0 0 51px;
     color: var(--white, #FFF);
-text-align: center;
-border: none;
-cursor: pointer;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+    background:  #20BBFE ;    
+    transition: background 2s;
+    opacity: 1;
+    transition: opacity 0.1s;
 }
+
+.header-middle button:hover {
+    background: linear-gradient(to bottom left, #19BAFF , #8BD5FF) !important;
+    opacity: 1;
+    transition-delay: 0.1s;
+}
+
+
 
 
 // ---------------------------------
 .header-bottom{
 display: flex;
 justify-content: space-between;
-margin-top: 173px;
+margin-top: 8px;
 }
 
 .header-bottom_info__price,
@@ -165,13 +182,48 @@ padding: 30px;
     background-repeat: no-repeat;
     background-position: bottom;
     position: relative;
+    margin-right: 0;
 }
 
 .slide{
     flex-direction: column;
     justify-content: space-between;
     height: 100%;
+
 }
+
+.fade-in {
+    opacity: 1;
+    animation: fadeIn 0.45s linear forwards;
+}
+
+.fade-out {
+    opacity: 0;
+    animation: fadeOut 0.45s linear forwards;
+}
+
+@keyframes fadeIn {
+    from {
+         opacity: 0.4;
+
+    }
+    to {
+         opacity: 1;
+         transform: translateY(0px);
+    }
+}
+
+@keyframes fadeOut {
+    from {
+         opacity: 1;
+         visibility: visible;
+    }
+    to {
+         opacity: 0.4;
+         visibility: hidden;
+    }
+}
+
 
 .header-bottom_info__sale h3,
 .header-bottom_info__sale p {
@@ -197,6 +249,8 @@ margin-bottom: 0;
     background: #FFF;
     margin: 0 5px;
     cursor: pointer;
+    opacity: 1;
+ 
   }
 
   .dot_active{
@@ -206,7 +260,20 @@ margin-bottom: 0;
     flex-shrink: 0;
     border-radius: 8px;
     background: #FFF;
+    opacity: 1;
+    animation: ani 1s forwards;
+
+    @keyframes ani {
+        0% {opacity: 0;
+            transform: translateX(-15px);
+        }
+        100% {opacity: 1;
+            transform: translateX(0px);
+      }}
+
   }
+
+
 
 
 
@@ -230,6 +297,11 @@ margin-bottom: 0;
         display: flex;
         align-items: center;
         justify-content: space-between;
+        padding: 22px;
+    }
+
+    .header-top a{
+        margin-left: 0;
     }
 
     .header-top nav{
@@ -246,18 +318,19 @@ margin-bottom: 0;
     }
 
     .header-middle{
-        align-items: center;
+        height: auto;
     }
 
     .header-middle h1{
-        margin: 35px 0 0 0;
+        margin: 35px 0 0 22px;
         font-size: 26px;
-        width: 100%;
+        width: auto;
+        align-items: self-start;
     }
 
     .header-middle p{
         margin-top: 37px;
-        margin-left: 0;
+        margin-left: 21px;
         align-self: start;
     }
 
@@ -271,7 +344,7 @@ margin-bottom: 0;
     }
 
     .header-middle button{
-       margin-left: 0; 
+       margin-left: 22px; 
        width: 326px;
 height: 55px;
     }

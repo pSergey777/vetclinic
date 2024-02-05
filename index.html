@@ -29,10 +29,19 @@
                     <img src="img/logo.png" alt="logo">
                 </a>
                 <nav>
-                    <p>Услуги</p>
-                    <p>Специалисты</p>
-                    <p>Отзывы</p>
-                    <p>Контакты</p>
+                    <a href="#medical">
+                        <p>Услуги</p>
+                    </a>
+                    <a href="#staff">
+                        <p>Специалисты</p>
+                    </a>
+                    <a href="#feedback">
+                        <p>Отзывы</p>
+                    </a>
+                    <a href="#contacts">
+                        <p>Контакты</p>
+                    </a>
+
                 </nav>
                 <a href="tel:+79099006846">
                     <img src="img/phone icon svg 1.svg" alt="phone">
@@ -76,7 +85,12 @@
                         <h3>Скидки на вакцинацию</h3>
                         <p>Комплексная вакцинация <br> от бешенства для собаки кошек 1800р</p>
                     </div>
+                    <div class="slide">
+                        <h3>Акции на груминг</h3>
+                        <p>При визите на стрижку <br> обработка когтей в подарок</p>
+                    </div>
                     <div class="dots">
+                        <span class="dot"></span>
                         <span class="dot"></span>
                         <span class="dot"></span>
                         <span class="dot"></span>
@@ -89,7 +103,7 @@
 
     <main>
         <div class="container" id="target-block">
-            <div class="medical">
+            <div class="medical" id="medical">
                 <div class="medical-care_heading">
                     <h2>Профессиональная <br> <span class="medical-care_heading__span">медицинская помощь</span></h2>
                     <p>Залог успеха профилактика, а не лечение! <br> Предотвратить болезнь дешевле, чем ее лечить.</p>
@@ -108,42 +122,56 @@
                     <div class="services">
                         <h3>Весь спектр услуг</h3>
                         <div class="services-accordion">
-                            <button class="accordion"><span class="accordion-arrow">Терапия<img src="img/Arrow.svg"
+                            <button class="accordion">
+                                <span class="accordion-arrow">Терапия<img src="img/Arrow.svg"
                                         alt="arrow"></span></button>
                             <div class="services-panel">
                                 <p>Нужен текст !!!</p>
                             </div>
-
-                            <button class="accordion"><span class="accordion-arrow">Хирургия<img src="img/Arrow.svg"
+                        </div>
+                        <div class="services-accordion">
+                            <button class="accordion">
+                                <span class="accordion-arrow">Хирургия<img src="img/Arrow.svg"
                                         alt="arrow"></span></button>
                             <div class="services-panel">
                                 <p>Нужен текст !!!</p>
                             </div>
-
-                            <button class="accordion"><span class="accordion-arrow">Вакцинация<img src="img/Arrow.svg"
+                        </div>
+                        <div class="services-accordion">
+                            <button class="accordion">
+                                <span class="accordion-arrow">Вакцинация<img src="img/Arrow.svg"
                                         alt="arrow"></span></button>
                             <div class="services-panel">
                                 <p>Нужен текст !!!</p>
                             </div>
+                        </div>
+                        <div class="services-accordion">
+                            <button class="accordion">
+                                <span class="accordion-arrow">Профилактика заболеваний<img src="img/Arrow.svg"
+                                        alt="arrow"></span></button>
 
-                            <button class="accordion"><span class="accordion-arrow">Профилактика заболеваний<img
-                                        src="img/Arrow.svg" alt="arrow"></span></button>
                             <div class="services-panel">
                                 <p>Нужен текст !!!</p>
                             </div>
-
-                            <button class="accordion"><span class="accordion-arrow">Анализы и лабораторные
+                        </div>
+                        <div class="services-accordion">
+                            <button class="accordion">
+                                <span class="accordion-arrow">Анализы и лабораторные
                                     исследования<img src="img/Arrow.svg" alt="arrow"></span></button>
                             <div class="services-panel">
                                 <p>Нужен текст !!!</p>
                             </div>
+                        </div>
+                        <div class="services-accordion">
+                            <button class="accordion">
+                                <span class="accordion-arrow">Послеоперационное наблюдение<img src="img/Arrow.svg"
+                                        alt="arrow"></span></button>
 
-                            <button class="accordion"><span class="accordion-arrow">Послеоперационное наблюдение<img
-                                        src="img/Arrow.svg" alt="arrow"></span></button>
                             <div class="services-panel">
                                 <p>Нужен текст !!!</p>
                             </div>
-
+                        </div>
+                        <div class="services-accordion">
                             <button class="accordion"><span class="accordion-arrow">Эвтаназия и кремация<img
                                         src="img/Arrow.svg" alt="arrow"></span></button>
                             <div class="services-panel">
@@ -160,71 +188,79 @@
                     <p>Для эффективной работы мы используем специальные <br> техники и инструменты высоко качества</p>
                 </div>
                 <div class="grooming-wrapper">
-                    <div class="grooming-accordion services-accordion">
-                        <button class="accordion">
-                            <div class="grooming-service">
-                                <span class="accordion-arrow grooming-accordion_h3">Экспресс-линька</span>
-                                <span class="accordion-price">1 000 ₽</span>
+                    <div class="grooming-accordion">
+                        <div class="services-accordion">
+                            <button class="accordion">
+                                <div class="grooming-service">
+                                    <span class="accordion-arrow grooming-accordion_h3">Экспресс-линька</span>
+                                    <!-- <span class="accordion-price">1 000 ₽</span> -->
+                                </div>
+                                <img src="img/Arrow.svg" alt="arrow">
+                            </button>
+                            <div class="services-panel grooming-accordion_panel">
+                                <p>Процедура для быстрого и эффективного удаления подшерстка у животных, которые
+                                    находятся в
+                                    период линьки. Позволяет быстро освежить питомца, уменьшив количество шерсти,
+                                    которая
+                                    ежедневно осыпается по дому.</p>
                             </div>
-                            <img src="img/Arrow.svg" alt="arrow">
-                        </button>
-                        <div class="services-panel grooming-accordion_panel">
-                            <p>Процедура для быстрого и эффективного удаления подшерстка у животных, которые находятся в
-                                период линьки. Позволяет быстро освежить питомца, уменьшив количество шерсти, которая
-                                ежедневно осыпается по дому.</p>
                         </div>
-
-                        <button class="accordion">
-                            <div class="grooming-service">
-                                <span class="accordion-arrow grooming-accordion_h3">Уход за шерстью и кожей</span>
-                                <span class="accordion-price">1 000 ₽</span>
+                        <div class="services-accordion">
+                            <button class="accordion">
+                                <div class="grooming-service">
+                                    <span class="accordion-arrow grooming-accordion_h3">Уход за шерстью и кожей</span>
+                                    <!-- <span class="accordion-price">1 000 ₽</span> -->
+                                </div>
+                                <img src="img/Arrow.svg" alt="arrow">
+                            </button>
+                            <div class="services-panel grooming-accordion_panel">
+                                <p>Процедура для быстрого и эффективного удаления подшерстка у животных, которые
+                                    находятся в
+                                    период линьки. Позволяет быстро освежить питомца, уменьшив количество шерсти,
+                                    которая
+                                    ежедневно осыпается по дому.</p>
                             </div>
-                            <img src="img/Arrow.svg" alt="arrow">
-                        </button>
-                        <div class="services-panel grooming-accordion_panel">
-                            <p>Процедура для быстрого и эффективного удаления подшерстка у животных, которые находятся в
-                                период линьки. Позволяет быстро освежить питомца, уменьшив количество шерсти, которая
-                                ежедневно осыпается по дому.</p>
                         </div>
-
-                        <button class="accordion">
-                            <div class="grooming-service">
-                                <span class="accordion-arrow grooming-accordion_h3">Уход за глазами и ушами</span>
-                                <span class="accordion-price">1 000 ₽</span>
+                        <div class="services-accordion">
+                            <button class="accordion">
+                                <div class="grooming-service">
+                                    <span class="accordion-arrow grooming-accordion_h3">Уход за глазами и ушами</span>
+                                    <!-- <span class="accordion-price">1 000 ₽</span> -->
+                                </div>
+                                <img src="img/Arrow.svg" alt="arrow">
+                            </button>
+                            <div class="services-panel grooming-accordion_panel">
+                                <p>Процедура для быстрого и эффективного удаления подшерстка у животных, которые
+                                    находятся в
+                                    период линьки. Позволяет быстро освежить питомца, уменьшив количество шерсти,
+                                    которая
+                                    ежедневно осыпается по дому.</p>
                             </div>
-                            <img src="img/Arrow.svg" alt="arrow">
-                        </button>
-                        <div class="services-panel grooming-accordion_panel">
-                            <p>Процедура для быстрого и эффективного удаления подшерстка у животных, которые находятся в
-                                период линьки. Позволяет быстро освежить питомца, уменьшив количество шерсти, которая
-                                ежедневно осыпается по дому.</p>
                         </div>
-
-                        <button class="accordion">
-                            <div class="grooming-service">
-                                <span class="accordion-arrow grooming-accordion_h3">Уход за зубами и ротовой
-                                    полостью</span>
-                                <span class="accordion-price">1 000 ₽</span>
+                        <div class="services-accordion">
+                            <button class="accordion">
+                                <div class="grooming-service">
+                                    <span class="accordion-arrow grooming-accordion_h3">Уход за зубами и ротовой
+                                        полостью</span>
+                                    <!-- <span class="accordion-price">1 000 ₽</span> -->
+                                </div>
+                                <img src="img/Arrow.svg" alt="arrow">
+                            </button>
+                            <div class="services-panel grooming-accordion_panel">
+                                <p>Процедура для быстрого и эффективного удаления подшерстка у животных, которые
+                                    находятся в
+                                    период линьки. Позволяет быстро освежить питомца, уменьшив количество шерсти,
+                                    которая
+                                    ежедневно осыпается по дому.</p>
                             </div>
-                            <img src="img/Arrow.svg" alt="arrow">
-                        </button>
-                        <div class="services-panel grooming-accordion_panel">
-                            <p>Процедура для быстрого и эффективного удаления подшерстка у животных, которые находятся в
-                                период линьки. Позволяет быстро освежить питомца, уменьшив количество шерсти, которая
-                                ежедневно осыпается по дому.</p>
                         </div>
-
-
-
-
-
                     </div>
                     <div class="grooming-img">
                         <img src="img/mini_dog.png" alt="mini dog">
                     </div>
                 </div>
             </div>
-            <div class="staff">
+            <div class="staff" id="staff">
                 <div class="staff-heading">
                     <h2>Что делает
                         <span class="medical-care_heading__span">нас лучшими</span>
@@ -286,7 +322,7 @@
                 <button>Записаться</button>
             </div>
         </div>
-        <div class="feedback">
+        <div class="feedback" id="feedback">
             <div class="feedback-header container">
                 <h2>Мы рады вашей обратной связи </h2>
                 <div class="feedback-header_text">
@@ -303,69 +339,130 @@
             <div class="swiper mySwiper">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
-                        <div class="swiper-slide">
-                            <div class="swiper-slide_names">
-                                <div class="swiper-slide_names__info">
-                                    <img src="img/ptient_one.png" alt="photo">
-                                    <div class="swiper-slide_names__clien-name">
-                                        <h4>Екатерина</h4>
-                                        <p>Яндекс отзывы</p>
-                                    </div>
+                        <div class="swiper-slide_names">
+                            <div class="swiper-slide_names__info">
+                                <img src="img/staff_photo.png" alt="photo">
+                                <div class="swiper-slide_names__clien-name">
+                                    <h4>Юрий</h4>
+                                    <p>Яндекс отзывы</p>
                                 </div>
-                                <div class="swiper-slide_names__info">
-                                    <img src="img/staff_photo.png" alt="photo">
-                                    <div class="swiper-slide_names__clien-name">
-                                        <h4>Анатолий Михайлович</h4>
-                                        <p>лечащий врач</p>
+                            </div>
+                            <div class="swiper-slide_names__info">
+                                <img src="img/doctor_ir_nik.png" alt="photo">
+                                <div class="swiper-slide_names__clien-name">
+                                    <h4>Ирина Николаевна</h4>
+                                    <p>лечащий врач</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide_raiting">
+                            <div class="raiting">
+                                <div class="stars">
+                                    <div class="rating-wrapper">
+
+                                        <!-- star 5 -->
+                                        <input type="radio" id="5-star-rating" name="star-rating" value="5">
+                                        <label for="5-star-rating" class="star-rating">
+                                            <i class="fas fa-star d-inline-block"></i>
+                                        </label>
+
+                                        <!-- star 4 -->
+                                        <input type="radio" id="4-star-rating" name="star-rating" value="4">
+                                        <label for="4-star-rating" class="star-rating star">
+                                            <i class="fas fa-star d-inline-block"></i>
+                                        </label>
+
+                                        <!-- star 3 -->
+                                        <input type="radio" id="3-star-rating" name="star-rating" value="3">
+                                        <label for="3-star-rating" class="star-rating star">
+                                            <i class="fas fa-star d-inline-block"></i>
+                                        </label>
+
+                                        <!-- star 2 -->
+                                        <input type="radio" id="2-star-rating" name="star-rating" value="2">
+                                        <label for="2-star-rating" class="star-rating star">
+                                            <i class="fas fa-star d-inline-block"></i>
+                                        </label>
+
+                                        <!-- star 1 -->
+                                        <input type="radio" id="1-star-rating" name="star-rating" value="1">
+                                        <label for="1-star-rating" class="star-rating star">
+                                            <i class="fas fa-star d-inline-block"></i>
+                                        </label>
+
                                     </div>
                                 </div>
                             </div>
-                            <div class="swiper-slide_raiting">
-                                <div class="raiting">
-                                    <div class="stars">
-                                        <div class="rating-wrapper">
+                            <p class="swiper-slide_date">21.12.2022</p>
+                        </div>
+                        <div class="swiper-slide_feedback">
+                            <h3>«Огромное спасибо ВетГрупп...</h3>
+                            <p>…Cпециалисты на высоте, помогли 3х недельному попугаю корелле. Который раз прихожу сюда и
+                                все проходит отлично, всех своих животных только сюда вожу».</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="swiper-slide_names">
+                            <div class="swiper-slide_names__info">
+                                <img src="img/ptient_one.png" alt="photo">
+                                <div class="swiper-slide_names__clien-name">
+                                    <h4>Екатерина</h4>
+                                    <p>Яндекс отзывы</p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide_names__info">
+                                <img src="img/staff_photo.png" alt="photo">
+                                <div class="swiper-slide_names__clien-name">
+                                    <h4>Анатолий Михайлович</h4>
+                                    <p>лечащий врач</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide_raiting">
+                            <div class="raiting">
+                                <div class="stars">
+                                    <div class="rating-wrapper">
 
-                                            <!-- star 5 -->
-                                            <input type="radio" id="5-star-rating" name="star-rating" value="5">
-                                            <label for="5-star-rating" class="star-rating">
-                                                <i class="fas fa-star d-inline-block"></i>
-                                            </label>
+                                        <!-- star 5 -->
+                                        <input type="radio" id="5-star-rating" name="star-rating" value="5">
+                                        <label for="5-star-rating" class="star-rating">
+                                            <i class="fas fa-star d-inline-block"></i>
+                                        </label>
 
-                                            <!-- star 4 -->
-                                            <input type="radio" id="4-star-rating" name="star-rating" value="4">
-                                            <label for="4-star-rating" class="star-rating star">
-                                                <i class="fas fa-star d-inline-block"></i>
-                                            </label>
+                                        <!-- star 4 -->
+                                        <input type="radio" id="4-star-rating" name="star-rating" value="4">
+                                        <label for="4-star-rating" class="star-rating star">
+                                            <i class="fas fa-star d-inline-block"></i>
+                                        </label>
 
-                                            <!-- star 3 -->
-                                            <input type="radio" id="3-star-rating" name="star-rating" value="3">
-                                            <label for="3-star-rating" class="star-rating star">
-                                                <i class="fas fa-star d-inline-block"></i>
-                                            </label>
+                                        <!-- star 3 -->
+                                        <input type="radio" id="3-star-rating" name="star-rating" value="3">
+                                        <label for="3-star-rating" class="star-rating star">
+                                            <i class="fas fa-star d-inline-block"></i>
+                                        </label>
 
-                                            <!-- star 2 -->
-                                            <input type="radio" id="2-star-rating" name="star-rating" value="2">
-                                            <label for="2-star-rating" class="star-rating star">
-                                                <i class="fas fa-star d-inline-block"></i>
-                                            </label>
+                                        <!-- star 2 -->
+                                        <input type="radio" id="2-star-rating" name="star-rating" value="2">
+                                        <label for="2-star-rating" class="star-rating star">
+                                            <i class="fas fa-star d-inline-block"></i>
+                                        </label>
 
-                                            <!-- star 1 -->
-                                            <input type="radio" id="1-star-rating" name="star-rating" value="1">
-                                            <label for="1-star-rating" class="star-rating star">
-                                                <i class="fas fa-star d-inline-block"></i>
-                                            </label>
+                                        <!-- star 1 -->
+                                        <input type="radio" id="1-star-rating" name="star-rating" value="1">
+                                        <label for="1-star-rating" class="star-rating star">
+                                            <i class="fas fa-star d-inline-block"></i>
+                                        </label>
 
-                                        </div>
                                     </div>
                                 </div>
-                                <p class="swiper-slide_date">18.07.2023</p>
                             </div>
-                            <div class="swiper-slide_feedback">
-                                <h3>«Нет ни какого развода на деньги...</h3>
-                                <p>...Я, очень благодарна клинике. Помогли моему коту, нет ни какого развода <br> на
-                                    деньги, всё по делу. Очень внимательный врач. Самое главное, что <br> помогли моему
-                                    питомцу. Огромное спасибо».</p>
-                            </div>
+                            <p class="swiper-slide_date">18.07.2023</p>
+                        </div>
+                        <div class="swiper-slide_feedback">
+                            <h3>«Нет ни какого развода на деньги...</h3>
+                            <p>...Я, очень благодарна клинике. Помогли моему коту, нет ни какого развода <br> на
+                                деньги, всё по делу. Очень внимательный врач. Самое главное, что <br> помогли моему
+                                питомцу. Огромное спасибо».</p>
                         </div>
                     </div>
                     <div class="swiper-slide">
@@ -445,7 +542,7 @@
                                     </div>
                                 </div>
                                 <div class="swiper-slide_names__info">
-                                    <img src="img/staff_photo.png" alt="photo">
+                                    <img src="img/doctor_ir_nik.png" alt="photo">
                                     <div class="swiper-slide_names__clien-name">
                                         <h4>Ирина Николаевна</h4>
                                         <p>лечащий врач</p>
@@ -568,6 +665,135 @@
                             </div>
                         </div>
                     </div>
+                    <div class="swiper-slide">
+                        <div class="swiper-slide_names">
+                            <div class="swiper-slide_names__info">
+                                <img src="img/staff_photo_wom.png" alt="photo">
+                                <div class="swiper-slide_names__clien-name">
+                                    <h4>Ирина</h4>
+                                    <p>Яндекс отзывы</p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide_names__info">
+                                <img src="img/doctor_ir_nik.png" alt="photo">
+                                <div class="swiper-slide_names__clien-name">
+                                    <h4>Ирина Николаевна</h4>
+                                    <p>лечащий врач</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide_raiting">
+                            <div class="raiting">
+                                <div class="stars">
+                                    <div class="rating-wrapper">
+
+                                        <!-- star 5 -->
+                                        <input type="radio" id="5-star-rating" name="star-rating" value="5">
+                                        <label for="5-star-rating" class="star-rating">
+                                            <i class="fas fa-star d-inline-block"></i>
+                                        </label>
+
+                                        <!-- star 4 -->
+                                        <input type="radio" id="4-star-rating" name="star-rating" value="4">
+                                        <label for="4-star-rating" class="star-rating star">
+                                            <i class="fas fa-star d-inline-block"></i>
+                                        </label>
+
+                                        <!-- star 3 -->
+                                        <input type="radio" id="3-star-rating" name="star-rating" value="3">
+                                        <label for="3-star-rating" class="star-rating star">
+                                            <i class="fas fa-star d-inline-block"></i>
+                                        </label>
+
+                                        <!-- star 2 -->
+                                        <input type="radio" id="2-star-rating" name="star-rating" value="2">
+                                        <label for="2-star-rating" class="star-rating star">
+                                            <i class="fas fa-star d-inline-block"></i>
+                                        </label>
+
+                                        <!-- star 1 -->
+                                        <input type="radio" id="1-star-rating" name="star-rating" value="1">
+                                        <label for="1-star-rating" class="star-rating star">
+                                            <i class="fas fa-star d-inline-block"></i>
+                                        </label>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="swiper-slide_date">03.09.2023</p>
+                        </div>
+                        <div class="swiper-slide_feedback">
+                            <h3>«Взялись помочь только в этой клинике...</h3>
+                            <p>...Пациент был не совсем обычный - серая ворона с повреждённым крылом. Во всех остальных
+                                ветеринарных мне отказали в приёме. Во второй раз пришла с котёнком. В оба раза всё
+                                прошло хорошо. Врач дал много полезной информации. Однозначно, буду и впредь обращаться
+                                сюда за помощью».</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="swiper-slide_names">
+                            <div class="swiper-slide_names__info">
+                                <img src="img/staff_photo_wom.png" alt="photo">
+                                <div class="swiper-slide_names__clien-name">
+                                    <h4>Юлиана</h4>
+                                    <p>Яндекс отзывы</p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide_names__info">
+                                <img src="img/doctor_ann_val.png" alt="photo">
+                                <div class="swiper-slide_names__clien-name">
+                                    <h4>Анна Валерьевна</h4>
+                                    <p>лечащий врач</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide_raiting">
+                            <div class="raiting">
+                                <div class="stars">
+                                    <div class="rating-wrapper">
+
+                                        <!-- star 5 -->
+                                        <input type="radio" id="5-star-rating" name="star-rating" value="5">
+                                        <label for="5-star-rating" class="star-rating">
+                                            <i class="fas fa-star d-inline-block"></i>
+                                        </label>
+
+                                        <!-- star 4 -->
+                                        <input type="radio" id="4-star-rating" name="star-rating" value="4">
+                                        <label for="4-star-rating" class="star-rating star">
+                                            <i class="fas fa-star d-inline-block"></i>
+                                        </label>
+
+                                        <!-- star 3 -->
+                                        <input type="radio" id="3-star-rating" name="star-rating" value="3">
+                                        <label for="3-star-rating" class="star-rating star">
+                                            <i class="fas fa-star d-inline-block"></i>
+                                        </label>
+
+                                        <!-- star 2 -->
+                                        <input type="radio" id="2-star-rating" name="star-rating" value="2">
+                                        <label for="2-star-rating" class="star-rating star">
+                                            <i class="fas fa-star d-inline-block"></i>
+                                        </label>
+
+                                        <!-- star 1 -->
+                                        <input type="radio" id="1-star-rating" name="star-rating" value="1">
+                                        <label for="1-star-rating" class="star-rating star">
+                                            <i class="fas fa-star d-inline-block"></i>
+                                        </label>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="swiper-slide_date">13.04.2021</p>
+                        </div>
+                        <div class="swiper-slide_feedback">
+                            <h3>«Это лучшая вет клиника ...</h3>
+                            <p>...особенно Анна Валерьевнаю После похода в ВетГрупп, кошелёк не пустеет , не накручивают
+                                ценник. Уже 5 лет только в ВетГрупп. Спасибо вам и желаю процветания ! Не задумываясь
+                                идите к ним !!!».</p>
+                        </div>
+                    </div>
                 </div>
                 <div class="swiper-pagination"></div>
 
@@ -582,8 +808,9 @@
                 </div>
                 <div class="faq-wrapper">
                     <img class="faq-form_reptile" src="img/reptile.png" alt="reptile">
-                    <div class="faq-accordion services-accordion">
-                        <button class="accordion"><span
+                    <div class="faq-accordion ">
+                        <div class="services-accordion">
+                            <button class="accordion"><span
                                 class=" faq-accordion_text accordion-arrow grooming-accordion_h3">
                                 Какие услуги предоставляет ваша ветеринарная клиника?
                                 <img src="img/Arrow.svg" alt="arrow"></span></button>
@@ -595,42 +822,47 @@
                             <li>Лабораторные исследования;</li>
                             <li>Эвтаназия и кремация животных;</li>
                         </div>
-
-                        <button class="accordion">
-                            <span class=" faq-accordion_text accordion-arrow grooming-accordion_h3">
-                                Какие методы диагностики мы используем?
-                                <img src="img/Arrow.svg" alt="arrow"></span></button>
-                        <div class="faq-accordion_panel services-panel grooming-accordion_panel">
-                            <p>Нужен текст !!!</p>
                         </div>
-
-                        <button class="accordion">
-                            <span class=" faq-accordion_text accordion-arrow grooming-accordion_h3">
-                                Что можно приобрести в нашей вет аптеке?
-                                <img src="img/Arrow.svg" alt="arrow"></span></button>
-                        <div class="faq-accordion_panel services-panel grooming-accordion_panel">
-                            <p>Нужен текст !!!</p>
+                        <div class="services-accordion">
+                            <button class="accordion">
+                                <span class=" faq-accordion_text accordion-arrow grooming-accordion_h3">
+                                    Какие методы диагностики мы используем?
+                                    <img src="img/Arrow.svg" alt="arrow"></span></button>
+                            <div class="faq-accordion_panel services-panel grooming-accordion_panel">
+                                <p>Нужен текст !!!</p>
+                            </div>
                         </div>
-
-                        <button class="accordion">
-                            <span class=" faq-accordion_text accordion-arrow grooming-accordion_h3">
-                                Как часто нужно проводить вакцинацию?
-                                <img src="img/Arrow.svg" alt="arrow"></span></button>
-                        <div class="faq-accordion_panel services-panel grooming-accordion_panel">
-                            <p>Нужен текст !!!</p>
+                        <div class="services-accordion">
+                            <button class="accordion">
+                                <span class=" faq-accordion_text accordion-arrow grooming-accordion_h3">
+                                    Что можно приобрести в нашей вет аптеке?
+                                    <img src="img/Arrow.svg" alt="arrow"></span></button>
+                            <div class="faq-accordion_panel services-panel grooming-accordion_panel">
+                                <p>Нужен текст !!!</p>
+                            </div>
                         </div>
-
-                        <button class="accordion">
-                            <span class=" faq-accordion_text accordion-arrow grooming-accordion_h3">
-                                Какие виды животных мы принимаем?
-                                <img src="img/Arrow.svg" alt="arrow"></span></button>
-                        <div class="faq-accordion_panel services-panel grooming-accordion_panel">
-                            <p>Нужен текст !!!</p>
+                        <div class="services-accordion">
+                            <button class="accordion">
+                                <span class=" faq-accordion_text accordion-arrow grooming-accordion_h3">
+                                    Как часто нужно проводить вакцинацию?
+                                    <img src="img/Arrow.svg" alt="arrow"></span></button>
+                            <div class="faq-accordion_panel services-panel grooming-accordion_panel">
+                                <p>Нужен текст !!!</p>
+                            </div>
+                        </div>
+                        <div class="services-accordion">
+                            <button class="accordion">
+                                <span class=" faq-accordion_text accordion-arrow grooming-accordion_h3">
+                                    Какие виды животных мы принимаем?
+                                    <img src="img/Arrow.svg" alt="arrow"></span></button>
+                            <div class="faq-accordion_panel services-panel grooming-accordion_panel">
+                                <p>Нужен текст !!!</p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="contacts">
+            <div class="contacts" id="contacts">
                 <div class="contacts-header">
                     <h2>Хотите <span class="medical-care_heading__span">попасть на приём</span><br>
                         или остались вопросы?

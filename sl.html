@@ -2,42 +2,146 @@
 <html lang="en">
 
 <head>
-  <div class="grooming-accordion services-accordion">
-    <div class="accordion accordion-arrow grooming-accordion_h3" onclick="toggleAccordion(1)">Экспресс-линька</div>
-    <div class="services-panel grooming-accordion_panel">
-      <p>Процедура для быстрого и эффективного удаления подшерстка у животных, которые находятся в
-        период линьки. Позволяет быстро освежить питомца, уменьшив количество шерсти, которая
-        ежедневно осыпается по дому.</p>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style/style.css">
+  <link rel="stylesheet" href="style/header.css">
+  <link rel="stylesheet" href="style/main.css">
+  <link rel="stylesheet" href="style/footer.css">
+  <link rel="stylesheet" href="style/carousel.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100&display=swap" rel="stylesheet">
+  <title>Ветеринарная клиника в Подольске</title>
+</head>
+
+<body>
+
+  <div class="services">
+    <h3>Весь спектр услуг</h3>
+    <div class="services-accordion">
+      <button class="accordion">
+        <span class="accordion-arrow">Терапия<img src="img/Arrow.svg" alt="arrow"></span></button>
+      <div class="services-panel">
+        <p>Нужен текст !!!</p>
+      </div>
     </div>
-    <div class="accordion" onclick="toggleAccordion(2)">Меню 2</div>
-    <div class="services-panel grooming-accordion_panel">Содержание меню 2</div>
+    <div class="services-accordion">
+      <button class="accordion">
+        <span class="accordion-arrow">Хирургия<img src="img/Arrow.svg" alt="arrow"></span></button>
+      <div class="services-panel">
+        <p>Нужен текст !!!</p>
+      </div>
+    </div>
+    <div class="services-accordion">
+      <button class="accordion">
+        <span class="accordion-arrow">Хирургия<img src="img/Arrow.svg" alt="arrow"></span></button>
+      <div class="services-panel">
+        <p>Нужен текст !!!</p>
+      </div>
+    </div>
+    <div class="services-accordion">
+      <button class="accordion">
+        <span class="accordion-arrow">Вакцинация<img src="img/Arrow.svg" alt="arrow"></span></button>
+      <div class="services-panel">
+        <p>Нужен текст !!!</p>
+      </div>
+    </div>
+    <div class="services-accordion">
+      <button class="accordion">
+        <span class="accordion-arrow">Профилактика заболеваний<img src="img/Arrow.svg" alt="arrow"></span></button>
+
+      <div class="services-panel">
+        <p>Нужен текст !!!</p>
+      </div>
+    </div>
+    <div class="services-accordion">
+      <button class="accordion">
+        <span class="accordion-arrow">Анализы и лабораторные
+          исследования<img src="img/Arrow.svg" alt="arrow"></span></button>
+      <div class="services-panel">
+        <p>Нужен текст !!!</p>
+      </div>
+    </div>
+    <div class="services-accordion">
+      <button class="accordion">
+        <span class="accordion-arrow">Послеоперационное наблюдение<img src="img/Arrow.svg" alt="arrow"></span></button>
+
+      <div class="services-panel">
+        <p>Нужен текст !!!</p>
+      </div>
+    </div>
+    <div class="services-accordion">
+      <button class="accordion"><span class="accordion-arrow">Эвтаназия и кремация<img src="img/Arrow.svg"
+            alt="arrow"></span></button>
+      <div class="services-panel">
+        <p>Нужен текст !!!</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- <div class="services-accordion">
+    <button class="accordion"><span class="accordion-arrow">Терапия<img src="img/Arrow.svg" alt="arrow"></span></button>
+    <div class="services-panel">
+      <p>Нужен текст !!!</p>
+    </div>
+
+    <button class="accordion"><span class="accordion-arrow">Хирургия<img src="img/Arrow.svg"
+          alt="arrow"></span></button>
+    <div class="services-panel">
+      <p>Нужен текст !!!</p>
+    </div>
+
+    <button class="accordion"><span class="accordion-arrow">Вакцинация<img src="img/Arrow.svg"
+          alt="arrow"></span></button>
+    <div class="services-panel">
+      <p>Нужен текст !!!</p>
+    </div>
+
+    <button class="accordion"><span class="accordion-arrow">Профилактика заболеваний<img src="img/Arrow.svg"
+          alt="arrow"></span></button>
+    <div class="services-panel">
+      <p>Нужен текст !!!</p>
+    </div>
+
+    <button class="accordion"><span class="accordion-arrow">Анализы и лабораторные
+        исследования<img src="img/Arrow.svg" alt="arrow"></span></button>
+    <div class="services-panel">
+      <p>Нужен текст !!!</p>
+    </div>
+
+    <button class="accordion"><span class="accordion-arrow">Послеоперационное наблюдение<img src="img/Arrow.svg"
+          alt="arrow"></span></button>
+    <div class="services-panel">
+      <p>Нужен текст !!!</p>
+    </div>
+
+    <button class="accordion"><span class="accordion-arrow">Эвтаназия и кремация<img src="img/Arrow.svg"
+          alt="arrow"></span></button>
+    <div class="services-panel">
+      <p>Нужен текст !!!</p>
+    </div>
+  </div> -->
+
+
+
+  </div>
+  <div class="grooming-img">
+    <img src="img/mini_dog.png" alt="mini dog">
   </div>
 
 
 
+
+
   <style>
-    .accordion {
-      overflow: hidden;
-    }
 
-    .menu {
-      cursor: pointer;
-      background-color: lightgray;
-      margin: 5px;
-      display: flex;
-      width: 696px;
-      padding: 24px 157px 24px 40px;
-      align-items: center;
-      gap: 10px;
-      flex-shrink: 0;
-    }
-
-    .panel {
-      padding: 10px;
-      display: none;
-      width: 696px;
-    height: 92px;
-    }
   </style>
 
 
@@ -47,47 +151,63 @@
 
   <script>
 
-const acc = document.getElementsByClassName("accordion");
-let i;
 
-for (i = 0; i < acc.length; i++) {
-    acc[i].addEventListener("click", function() {
-        this.classList.toggle("accordion-active");
-        const accArr = this.querySelector('.accordion-arrow')
+    const accordionItems = document.querySelectorAll('.services-accordion');
+
+    accordionItems.forEach((item) => {
+      const headerQ = item.querySelector('.accordion');
+      const content = item.querySelector('.services-panel');
+      const accArr = item.querySelector('.accordion-arrow')
+      const accImg = item.querySelector('img')
+
+
+      headerQ.addEventListener('click', () => {
+        accordionItems.forEach((otherItem) => {
+
+          if (otherItem !== item) {
+            otherItem.classList.remove('accordion-active');
+          }
+        });
+        headerQ.classList.toggle('accordion-active');
         accArr.classList.toggle("accordion-arrow_open")
-        const accImg = this.querySelector('img')
-        const panel = this.nextElementSibling;
-        if (panel.style.display === "block") {
-            panel.style.display = "none";
-            accImg.src="/img/Arrow.svg"
+        if (content.style.display === "block") {
+          content.style.display = "none";
+          accImg.src = "/img/Arrow.svg"
         } else {
-            panel.style.display = "none";
-            accImg.src="/img/Arrow_down.svg"
-        }
-    });
-}
+          content.style.display = "block";
+          accImg.src = "/img/Arrow_down.svg"
 
-    // function toggleAccordion(index) {
-    //   let panels = document.querySelectorAll(".grooming-accordion_panel");
-    //   panels.forEach(function (panel, i) {
-    //     if (i + 1 === index) {
-    //       if (panel.style.display === "block") {
-    //         panel.style.display = "none";
-    //       } else {
-    //         panel.style.display = "block";
-    //       }
-    //     } else {
-    //       panel.style.display = "none";
-    //     }
-    //   });
-    // }
+        }
+      });
+
+      document.addEventListener('click', (event) => {
+        if (!item.contains(event.target)) {
+          headerQ.classList.remove('accordion-active');
+          accArr.classList.remove("accordion-arrow_open")
+          content.style.display = "none";
+          accImg.src = "/img/Arrow.svg"
+        }
+      });
+    });
+
+
+
+
+
+
+
+
 
   </script>
 
-
-
-
-
 </body>
+
+
+
+
+
+
+
+
 
 </html>
