@@ -19,6 +19,16 @@ header {
   margin: 0;
   cursor: pointer;
   height: 11px;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: var(--gray-text, #AEAEAE);
+  cursor: pointer;
+  margin-left: 50px;
+}
+
+.header-top a p:hover {
+  color: #19BAFF;
 }
 
 .header-top p {
@@ -27,15 +37,6 @@ header {
 
 .header-top img {
   margin-right: 8px;
-}
-
-.header-top a {
-  display: flex;
-  align-items: center;
-  text-decoration: none;
-  color: var(--gray-text, #AEAEAE);
-  cursor: pointer;
-  margin-left: 50px;
 }
 
 .header-middle {

@@ -1,7 +1,7 @@
 var swiper = new Swiper(".mySwiper", {
   // centeredSlides: true,
-  initialSlide: 1.1, // устанавливаем второй слайд как начальный
-  slidesPerView: 3.5,
+  initialSlide: 0.7, // устанавливаем второй слайд как начальный
+  slidesPerView: 2,
   spaceBetween: 15,
   freeMode: true,
   // slidesPerColumn: 1,

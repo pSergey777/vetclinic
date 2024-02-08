@@ -1,4 +1,8 @@
 @charset "UTF-8";
+main {
+  margin-bottom: 80px;
+}
+
 .medical-care_heading,
 .grooming-heading,
 .staff-heading,
@@ -98,13 +102,14 @@
   display: flex;
   flex-direction: column;
   margin-left: 8px;
+  z-index: 1;
 }
 
 .services h3 {
   color: var(--text, #656565);
   width: 100%;
   margin-left: 50px;
-  margin-bottom: 158px;
+  margin-bottom: 70px;
 }
 
 .services-accordion {
@@ -112,8 +117,13 @@
   flex-direction: column;
 }
 
+.services-accordion_data {
+  margin-left: 42px;
+  margin-bottom: 8px;
+}
+
 .medical-care button {
-  padding: 10px;
+  padding: 8px;
 }
 
 .services-panel {
@@ -214,7 +224,6 @@
 }
 
 .grooming-accordion_panel p {
-  width: 495px;
   color: white;
 }
 
@@ -517,6 +526,10 @@
   color: var(--white, #FFF);
 }
 
+.faq-accordion_panel p {
+  width: 100%;
+}
+
 .faq-accordion_text {
   font-size: 22px;
 }
@@ -536,13 +549,58 @@
 .contacts-wrapper_form {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+}
+
+.contacts-wrapper_form__info {
+  max-width: 311px;
+}
+
+.contacts-wrapper_form__info_wrapper {
+  display: flex;
+  flex-direction: column;
+  padding: 36px 38px;
+  max-width: 100%;
+  background: #ffffff;
+  border-radius: 12px;
+}
+
+.contacts-wrapper_form__info_wrapper p {
+  color: #656565 !important;
+}
+
+.contacts-wrapper_form__info_adress {
+  display: flex;
+  flex-direction: column;
+}
+
+.contacts-wrapper_form__info_adress img {
+  margin-right: 7px;
+  width: 23px;
+  height: 23px;
+}
+
+.contacts-wrapper_form__info_adress a {
+  text-decoration: none;
+  color: #656565;
+  font-size: 16px;
+}
+
+.contacts-wrapper_form__info_adress_wrapper {
+  display: flex;
   align-items: center;
+  margin-bottom: 17px;
+}
+
+.contacts-wrapper_form__info_adress_wrapper:last-child {
+  margin-bottom: 32px;
 }
 
 .contacts-wrapper_form p {
   font-size: 14px;
   color: var(--white, #FFF);
-  margin-bottom: 34px;
+  margin-bottom: 30px;
+  font-size: 18px;
 }
 
 .contacts-wrapper_form input,
@@ -581,11 +639,12 @@
 }
 
 .contacts-wrapper_form button {
-  margin-top: 43px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  max-width: 226px;
+  max-height: 55px;
   border-radius: 12px;
   background: var(--akcent, #20BBFE);
   border: 3px solid #FFF;
@@ -594,6 +653,7 @@
   transition: background 2s;
   opacity: 1;
   transition: opacity 0.1s;
+  margin-bottom: 0;
 }
 
 .contacts-wrapper_form button:hover {
@@ -602,9 +662,31 @@
   transition-delay: 0.1s;
 }
 
+.contacts-wrapper_form__links {
+  margin-top: 50px;
+  margin-left: 17px;
+}
+
+.contacts-wrapper_form__links p {
+  font-size: 14px;
+  margin-bottom: 0;
+}
+
+.contacts-wrapper_form__links_wrapper {
+  margin-top: 8px;
+}
+
+.contacts-wrapper_form__links_wrapper a {
+  margin-right: 10px;
+}
+
 .contacts-wrapper_map {
-  width: 680px;
-  height: 479px;
+  width: 801px;
+  height: 467px;
+}
+
+.contacts-wrapper_map iframe {
+  border-radius: 12px;
 }
 
 @media (min-width: 769px) and (max-width: 1199.98px) {
