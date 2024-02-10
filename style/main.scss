@@ -45,7 +45,7 @@ main{
 
 .consultations{
 background: #20BBFE;
-width: 696px;
+width: 50%;
 height: 571px;
 border-radius: 12px;
 background: var(--akcent, #20BBFE);
@@ -97,18 +97,19 @@ margin: 36px 0 0 43px;
   }
 
 .services{
-    width: 496px;
-    height: 571px;
+    width: 50%;
+    // max-height: 571px;
     display: flex;
     flex-direction: column;
     margin-left: 8px;
     z-index: 1;
+    background: #ffffff;
+    border-radius: 12px;
+    justify-content: center;
 }
 
 .services h3{
     color: var(--text, #656565);
-    width: 100%;
-    margin-left: 50px;
     margin-bottom: 70px;
 }
 
@@ -118,16 +119,21 @@ margin: 36px 0 0 43px;
 }
 
 .services-accordion_data{
-    margin-left: 42px;
+    // padding-left: 42px;
     margin-bottom: 8px;
 }
 
 .medical-care button {
-    padding: 8px;
+    padding: 7px 7px 7px 43px;
+    
+}
+
+.medical-care button img{
+    margin-right: 38px;
 }
 
 .services-panel {
-    padding: 0 18px 35px 18px;
+    padding: 0 18px 35px 43px;
     display: none;
     background: var(--akcent, #20BBFE);
     overflow: hidden;
@@ -138,6 +144,8 @@ margin: 36px 0 0 43px;
 
 .services-panel p {
     color: white;
+    padding-top: 8px;
+
 }
 
 .accordion {
@@ -149,7 +157,7 @@ margin: 36px 0 0 43px;
     border: none;
     outline: none;
     // transition: 0.4s;
-    border-radius: 12px 12px 0 0;
+    border-radius: 12px;
 }
 
 .accordion-active{
@@ -159,6 +167,7 @@ margin: 36px 0 0 43px;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    border-radius: 12px 12px 0 0;
 }
 
 .accordion p {
@@ -170,8 +179,12 @@ margin: 36px 0 0 43px;
 .accordion-arrow{
     display: flex;
     justify-content: space-between;
-    color: var(--gray-text, #AEAEAE);
+    color: rgb(101, 101, 101);
     font-size: 16px;
+}
+
+.accordion-arrow:hover{
+    color: var(--gray-text, #AEAEAE);
 }
 
 
@@ -200,6 +213,7 @@ display: flex;
 justify-content: space-between;
 align-items: center;
 width: 100%;
+padding: 24px;
 }
 
 .grooming-service{
@@ -210,7 +224,7 @@ width: 100%;
 
 
 .grooming-accordion {
-    width: 696px;
+    width: 62%;
     margin-right: 8px;
     margin-left: 0;
     border-radius: 102px;
@@ -250,14 +264,15 @@ line-height: 120%;
 }
 
 .grooming-img{
-    width: 496px;
-height: 508px;
+    max-width: 495px;
+    max-height: 404px;
 border-radius: 12px;
 
 }
 
 .grooming-img img{
     width: 100%;
+    height: 100%;
     position: static;
 }
 
@@ -277,23 +292,27 @@ border-radius: 12px;
 
 
 .staff-card{
-    display: flex;
-    flex-direction: column;
-    max-width: 395px;
-    height: 319px;
-    justify-content: space-evenly;
+    width: 33%;
     border-radius: 12px;
     background: #FFF;
+}
 
+.staff-card_wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 33px;
 }
 
 .staff-card_header{
     display: flex;
     align-items: center;
+    width: 100%;
 }
 
 .staff-card_header__name{
-    margin-left: 8px;
+    margin-left: 11px;
 }
 
 .staff-card_header__name h4{
@@ -301,15 +320,25 @@ border-radius: 12px;
     margin-bottom: 0;
 }
 
+.staff-card_header__name p{
+    margin-bottom: 0;
+}
+
 .staff-card ul{
 display: flex;
 flex-direction: column;
+margin-top: 15px;
 }
 
 .staff-card li{
-    margin-top: 24px;
-    font-size: 16px;
-    margin-left: 25px;
+    margin-top: 18px;
+    font-size: 14px;
+    margin-left: 35px;
+}
+
+.staff-card li::marker{
+    color:  rgb(32, 187, 254);
+    margin-right: 0;
 }
 
 .staff button{
@@ -327,7 +356,7 @@ flex-direction: column;
     border: none;
     margin-top: 40px;
     cursor: pointer;
-    margin-top: 98px;   
+    margin-top: 50px;   
     transition: background 2s;
     opacity: 1;
     transition: opacity 0.1s;
@@ -387,7 +416,9 @@ margin-left: 8px;
 
 }
 
-
+.swiper-mobile {
+display: none !important;
+}
 
 .swiper-wrapper {
     width: 95%; /* уменьшение ширины контейнера */
@@ -516,6 +547,10 @@ bottom: 100px !important;
     flex-shrink: 0 !important;
     border-radius: 8px !important;
     background: #ffffff !important; 
+}
+
+.feedback-footer{
+    display: none;
 }
 
 
@@ -740,6 +775,13 @@ margin-bottom: 0;
     border-radius: 12px;
 }
 
+.politic{
+    display: flex;  
+    justify-content: right;
+    text-decoration: none;
+    color: #656565;
+    margin-top: 25px;
+}
 
 @media (min-width: 769px) and (max-width: 1199.98px)  {
     .medical-care_heading,
@@ -765,6 +807,7 @@ margin-bottom: 0;
     margin-top: 54px;
     margin-left: 22px;  
     width: auto;
+    margin-bottom: 38px;
 }
 
 .medical-care_heading h2,
@@ -780,7 +823,7 @@ margin-bottom: 0;
     font-style: normal;
     font-weight: 500;
     line-height: 120%;
-
+    margin-bottom: 32px;
 }
 
 .consultations h3, .services h3{
@@ -816,13 +859,16 @@ background-size:  90%, 185% ;
 }
 
 .services{
-    width: auto;
-    max-width: 100%;
+    width: 100%;
+    margin-left: 0;
+    margin-top: 8px;
+    border-radius: 12px;
 }
 
 .services h3{
-    max-width: auto;
-    width: inherit;
+
+    width: auto;
+    margin-bottom: 72px;
     }
 
 .services img{
@@ -831,21 +877,27 @@ display: none;
 
 .services-accordion{
     margin: 53px 0 0 22px;
-    max-width: 100%;
-    width: auto;
-    margin-left: 0; ;
+    width: 100%;
+    margin-left: 0; 
+    margin-top: 8px;
+}
+
+.services-accordion_data{
+margin: 0;
 }
 
 
+.consultations span{
+font-size: 22px;
+}
 
 .consultations span{
     display: none;
 }
 
 
-
-.consultations h3:after{
-content: 'Кошки';
+.consultations p:after{
+content: 'Проведение детального осмотра и обсуждение состояния вашего питомца. ';
 }
 
 .consultations p{
@@ -910,9 +962,6 @@ content: 'Кошки';
 }
 
 .grooming-img{
-    max-width: 370px;
-    width: auto;
-height: 376px;
 }
 
 .grooming-accordion{
@@ -937,12 +986,15 @@ display: flex;
 flex-direction: column;
 max-width: 100%;
 margin-top: 0;
+align-items: center;
+
 }
 
 .staff-card{
     max-width: 100%;
-height: 319px;
-margin-top: 78px;
+height:100%;
+margin-top: 8px;
+width: 100%;
 }
 
 .staff-card:first-of-type{
@@ -963,13 +1015,150 @@ margin-top: 34px;
    max-width: 100%;
 }
 
-.staff button{
-    display: none;
+.staff-card li {
+margin-left: 50px;
+ }
+
+
+.staff-card img{
+    width: 41px;
+    height: 41px;
 }
 
 .feedback{
-    display: none;
+height: 528px;
+    }
+
+.feedback-header{
+margin-top: 0px;
+padding: 38px;
+padding-left: 21px !important;
+padding-bottom: 0;
+
 }
+
+.feedback-header h2 {
+    color: rgb(255, 255, 255);
+    font-size: 24px;
+font-weight: 600;
+width: 60%;
+}
+
+.feedback-header_text{
+    margin-top: 0;
+    font-size: 14px;
+font-weight: 400;   
+}
+
+.feedback-header_text h3{
+    font-size: 14px;
+font-weight: 400;
+}
+
+.feedback-header_text p{
+display: none;
+}
+
+
+
+.swiper{
+    display: none !important;
+    max-height: 252px;
+    margin-left: 10px !important;
+}
+
+.swiper-mobile{
+    display: block !important;
+}
+
+.swiper-slide{
+    width: 90% !important;
+}
+
+.swiper-slide_raiting{
+    margin: 28px 0 0 21px;
+}
+
+.swiper-slide_names{
+    justify-content: left ;
+    margin-top: 22px;
+}
+
+.swiper-slide_names__info{
+width: 100%;
+justify-content: left;
+margin-left: 22px;
+}
+
+.swiper-slide_names__info:first-child{
+display: none;
+}
+
+.swiper-slide_names__info img{
+    width: 41px;
+    height: 41px;
+    margin-right: 8px;
+}
+
+.swiper-slide_names__clien-name h4{
+    font-size: 16px;
+    margin-bottom: 0;
+}
+
+.swiper-slide_names__clien-name p{
+font-size: 14px;
+margin-bottom: 0;
+}
+
+.swiper-slide_feedback{
+}
+
+.swiper-slide_feedback p{
+    font-size: 14px;
+}
+
+.swiper-slide_feedback h3{
+display: none;
+}
+
+.feedback-footer{
+    display: block;
+margin-top: 30px;
+position: relative;
+}
+
+.feedback-footer p{
+    color: var(--white, #FFF) !important;
+position: absolute;
+
+}
+
+.feedback-footer svg{
+    
+}
+
+.swiper-pagination{
+    position: absolute;
+    left: 150px !important;
+    bottom: 18px !important;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .faq{
     display: flex;

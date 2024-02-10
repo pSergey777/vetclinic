@@ -4,11 +4,21 @@ header{
     margin-top: 41px;
 }
 
+.header-wrapper{
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+}
+
 .header-top{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    border-radius: 12px;
     width: 100%;
+    height: 69px;
+    z-index: 1;
+    background: var(--white, #FFF);
 }
 
 .header-top nav{
@@ -24,7 +34,11 @@ header{
     text-decoration: none;
     color: var(--gray-text, #AEAEAE);
     cursor: pointer;
-    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.header-top a:first-child{
+
 }
 
 .header-top a p:hover{
@@ -38,6 +52,12 @@ color: #19BAFF;
 
 .header-top img{
     margin-right: 8px;
+
+}
+
+.img-logo img{
+    margin-top: 25px;
+margin-left: 50px; 
 }
 
 
@@ -47,8 +67,11 @@ color: #19BAFF;
     position: relative;
     display: flex;
     flex-direction: column;
+    border-radius: 12px;
     width: 100%;
     height: 562px;
+    background: var(--white, #FFF);
+    margin-top: -30px;
 }
 
 .header-middle_mobile{
@@ -57,7 +80,7 @@ color: #19BAFF;
 
 .header-middle h1{
     position: inherit;
-    margin-top: 69px;
+    margin-top: 108px;
     margin-left: 51px;
     max-width: 610px;
     z-index: 1;
@@ -67,7 +90,7 @@ color: #19BAFF;
 }
 
 .header-middle p{
-    margin: 48px 0px 0px 52px;
+    margin: 41px 0px 0px 52px;
     }
 
 .header-middle p:last-of-type{
@@ -114,7 +137,7 @@ margin-top: 8px;
 .header-bottom_info__price,
 .header-bottom_info__appointment,
 .header-bottom_info__sale {
-width: 395px;
+width: 33%;
 height: 259px;
 flex-shrink: 0;
 border-radius: 12px;
@@ -145,14 +168,28 @@ padding: 30px;
 .header-bottom_info__sale p {
     color: var(--gray-text, #AEAEAE);
     font-family: Lato;
-    font-size: 16px;
+    font-size: 14px;
     font-style: normal;
     font-weight: 400;
     line-height: 120%;
     width: 295px;
     padding: 30px;
-
 }
+
+.price-note {
+    margin-left: 5px; /* Устанавливаем отступ слева в 5px (можете изменить в зависимости от ваших потребностей) */
+    display: inline-block; /* Чтобы отступ был видимым */
+    font-size: 12px;
+    max-height: 12px;
+}
+
+.slide-footnote{
+    font-size: 12px;
+    font-weight: 400;
+    color: rgb(255, 255, 255);
+    opacity: 0.8;
+}
+
 
 
 .header-bottom_info__price img,
@@ -168,7 +205,7 @@ padding: 30px;
 }
 
 .header-middle_img{
-    z-index: 0;
+    z-index: 1;
     position: absolute;
     // top: -35px;
     right: 0;
@@ -299,6 +336,7 @@ margin-bottom: 0;
         align-items: center;
         justify-content: space-between;
         padding: 22px;
+
     }
 
     .header-top a{
@@ -309,9 +347,17 @@ margin-bottom: 0;
         content: url('/img/burger.svg');
     }
 
-    .header-top img{
+    .img-logo{
         width: 94.946px;
         height: 42.804px;
+
+        margin-bottom: 35px;
+    }
+
+    .header-top img{
+    width: 100%;
+    margin: 0;
+    
     }
 
     .header-top a:last-child{
@@ -320,13 +366,14 @@ margin-bottom: 0;
 
     .header-middle{
         height: auto;
+        align-items: center;
     }
 
     .header-middle h1{
-        margin: 35px 0 0 22px;
-        font-size: 26px;
+        margin: 50px 0 0 21px;
+        font-size: 24px;
         width: auto;
-        align-items: self-start;
+        align-self: start;
     }
 
     .header-middle p{
@@ -345,13 +392,14 @@ margin-bottom: 0;
     }
 
     .header-middle button{
-       margin-left: 22px; 
-       width: 326px;
-height: 55px;
+        margin-left: 0; 
+        width: 326px;
+        height: 55px;
+        margin-bottom: 58px;
     }
 
     .header-bottom{
-        margin-top: 65px;
+        margin-top: 8px;
         flex-direction: column-reverse;
         align-items: center;
         max-width: 100%;
@@ -361,9 +409,12 @@ height: 55px;
     .header-bottom_info__price,
     .header-bottom_info__appointment, 
     .header-bottom_info__sale {
-        max-width: 100%;
+        width: 100%;
         margin-right: 0px;
+        margin-bottom: 9px;
     }
+
+    
 
     .header-bottom_info__price h3, 
     .header-bottom_info__appointment h3, 
@@ -375,18 +426,36 @@ height: 55px;
     .header-bottom_info__appointment p, 
     .header-bottom_info__sale p {
         padding: 25px;
+
     }
 
     .header-bottom img{
         bottom: 15px
     }
 
+    .fade-in p{
+        font-size: 14px;
+    }
+
 };
 
 @media (min-width: 769px) and (max-width: 1199.98px)  {
-    .header-middle p{
-
-        align-self: center;
+    .header-middle{
         align-items: center;
     }
+
+    .header-middle p, h1{
+        align-items: center;
+        align-self: start !important;
+    }
+
+    .header-middle button{
+        margin-left: 0;
+
+    }
+
+
+
+
+
   }
