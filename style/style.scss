@@ -5,9 +5,7 @@
 }
 
 body{
-background-color: #F5FAFF !important;
-// background-color: #b5f1ba !important;
-
+    background-color: #F5FAFF !important;
 }
 
 
@@ -20,14 +18,29 @@ background-color: #F5FAFF !important;
     margin: 0 auto;
 }
 
+h1{
+    font-size: 26px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 120%;
+    }
+
+h2{
+    line-height: 110%; 
+}
+
 p{
     color: #AEAEAE;
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
-    line-height: 120%; /* 19.2px */
-    font-family: Lato;
+    line-height: 132%; /* 19.2px */
+    font-family: 'Lato', sans-serif !important;
 }
+
+
+    
+
 
 
 // button {
@@ -55,20 +68,8 @@ p{
 //     display: block;
 // }
 
-@media screen and (max-width: 1199.98px) {
+// @media screen and (max-width: 1199.98px) {
 // @media screen and (max-width: 768px) {
 
 
-h1{
-font-size: 26px;
-font-style: normal;
-font-weight: 500;
-line-height: 120%;
-}
 
-p{
-    font-size: 16px;
-font-style: normal;
-font-weight: 400;
-}
-}

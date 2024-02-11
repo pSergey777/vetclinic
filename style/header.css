@@ -14,16 +14,23 @@ header {
 .header-top {
   display: flex;
   align-items: center;
-  justify-content: space-between;
   border-radius: 12px;
   width: 100%;
   height: 69px;
   z-index: 1;
   background: var(--white, #FFF);
+  padding-top: 20px;
+}
+
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
 }
 
 .header-top nav {
   display: flex;
+  margin-right: 90px;
 }
 
 .header-top a {
@@ -35,7 +42,8 @@ header {
   text-decoration: none;
   color: var(--gray-text, #AEAEAE);
   cursor: pointer;
-  margin-right: 50px;
+  margin-right: 34px;
+  z-index: 10;
 }
 
 .header-top a p:hover {
@@ -51,8 +59,8 @@ header {
 }
 
 .img-logo img {
-  margin-top: 25px;
-  margin-left: 50px;
+  margin-top: 20px;
+  margin-left: 39px;
 }
 
 .header-middle {
@@ -73,16 +81,17 @@ header {
 .header-middle h1 {
   position: inherit;
   margin-top: 108px;
-  margin-left: 51px;
+  margin-left: 64px;
   max-width: 610px;
   z-index: 1;
   font-size: 53px;
   font-weight: 700;
-  line-height: 111%;
+  line-height: 120%;
+  color: #57595E;
 }
 
 .header-middle p {
-  margin: 41px 0px 0px 52px;
+  margin: 22px 0px 0px 64px;
 }
 
 .header-middle p:last-of-type {
@@ -99,7 +108,7 @@ header {
   gap: 7px;
   flex-shrink: 0;
   border-radius: 12px;
-  margin: 58px 0 0 51px;
+  margin: 70px 0 0 64px;
   color: var(--white, #FFF);
   text-align: center;
   border: none;
@@ -147,20 +156,20 @@ header {
   font-style: normal;
   font-weight: 400;
   line-height: 130%;
-  padding: 30px;
+  padding: 20px 27px;
 }
 
 .header-bottom_info__price p,
 .header-bottom_info__appointment p,
 .header-bottom_info__sale p {
   color: var(--gray-text, #AEAEAE);
-  font-family: Lato;
-  font-size: 14px;
+  font-size: 16px;
   font-style: normal;
   font-weight: 400;
-  line-height: 120%;
-  width: 295px;
-  padding: 30px;
+  line-height: 122%;
+  width: 370px;
+  padding: 20px 27px;
+  margin: 0;
 }
 
 .price-note {
@@ -171,22 +180,23 @@ header {
 }
 
 .slide-footnote {
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 400;
   color: rgb(255, 255, 255);
   opacity: 0.8;
+  width: 250px;
 }
 
 .header-bottom_info__price img,
 .header-bottom_info__appointment img {
   float: bottom;
   float: right;
-  width: 11px;
-  height: 11px;
+  width: 16px;
+  height: 16px;
   position: absolute;
   bottom: 0;
   right: 0;
-  margin: 30px;
+  margin: 26px;
 }
 
 .header-middle_img {
@@ -203,6 +213,8 @@ header {
   background-image: url("/img/bg_vector.png");
   background-repeat: no-repeat;
   background-position: bottom;
+  background-size: contain;
+  background-position-y: 72px;
   position: relative;
   margin-right: 0;
 }
@@ -248,6 +260,15 @@ header {
   margin-bottom: 0;
 }
 
+.header-bottom_info__sale p:first-child {
+  padding-bottom: 0;
+}
+
+.header-bottom_info__sale p:last-child {
+  padding-top: 12px;
+  width: 80%;
+}
+
 .dots {
   text-align: center;
   margin-top: 10px;
@@ -260,18 +281,18 @@ header {
 
 .dot {
   display: inline-block;
-  height: 10px;
-  width: 10px;
+  height: 8px;
+  width: 8px;
   border-radius: 50%;
   background: #FFF;
-  margin: 0 5px;
+  margin: 0 3px;
   cursor: pointer;
   opacity: 1;
 }
 
 .dot_active {
   display: inline-block;
-  width: 24px;
+  width: 28px;
   height: 6px;
   flex-shrink: 0;
   border-radius: 8px;
@@ -310,8 +331,12 @@ header {
   .header-top a {
     margin-left: 0;
   }
+  .navigation {
+    width: auto;
+  }
   .header-top nav {
     content: url("/img/burger.svg");
+    margin-right: 0;
   }
   .img-logo {
     width: 94.946px;
@@ -375,6 +400,7 @@ header {
   .header-bottom_info__appointment p,
   .header-bottom_info__sale p {
     padding: 25px;
+    width: 100%;
   }
   .header-bottom img {
     bottom: 15px;

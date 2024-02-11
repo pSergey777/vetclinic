@@ -28,7 +28,6 @@ main {
   font-size: 48px;
   font-style: normal;
   font-weight: 600;
-  line-height: 107%;
 }
 
 .medical-care_heading__span {
@@ -45,16 +44,17 @@ main {
 }
 
 .consultations {
-  background: #20BBFE;
-  width: 50%;
-  height: 571px;
+  height: 641px;
+  width: 62%;
   border-radius: 12px;
   background: var(--akcent, #20BBFE);
-  box-shadow: 0px 4px 4px 0px rgba(227, 227, 227, 0.25);
-  background-image: url(/img/cat.png), url(/img/bg_vector_two.png);
+  background-image: url(/img/cat.png), url(/img/bg_vector3.svg);
   background-repeat: no-repeat, no-repeat;
   background-position: bottom right, bottom;
   position: relative;
+  background-size: 65%, contain;
+  background-position-y: 71px;
+  background-position-y: 63px, 178px;
 }
 
 .consultations h3,
@@ -64,7 +64,7 @@ main {
   font-style: normal;
   font-weight: 500;
   line-height: 120%;
-  margin: 45px 0 0 43px;
+  margin: 26px 0 0 43px;
 }
 
 .consultations p {
@@ -72,7 +72,7 @@ main {
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
-  line-height: 100%;
+  line-height: 120%;
   margin: 36px 0 0 43px;
 }
 
@@ -97,14 +97,13 @@ main {
 }
 
 .services {
-  width: 50%;
+  width: 38%;
   display: flex;
   flex-direction: column;
   margin-left: 8px;
   z-index: 1;
   background: #ffffff;
   border-radius: 12px;
-  justify-content: center;
 }
 
 .services h3 {
@@ -118,11 +117,12 @@ main {
 }
 
 .services-accordion_data {
-  margin-bottom: 8px;
+  margin-bottom: 26px;
+  border-bottom: 1px solid #F5F5F5;
 }
 
 .medical-care button {
-  padding: 7px 7px 7px 43px;
+  padding: 0px 7px 0px 43px;
 }
 
 .medical-care button img {
@@ -135,6 +135,15 @@ main {
   background: var(--akcent, #20BBFE);
   overflow: hidden;
   border-radius: 0 0 12px 12px;
+}
+
+.services-panel_bg {
+  background: #ffffff;
+  color: rgb(75, 75, 75) !important;
+}
+
+.services-panel_bg p {
+  color: rgb(75, 75, 75) !important;
 }
 
 .services-panel p {
@@ -151,6 +160,11 @@ main {
   border: none;
   outline: none;
   border-radius: 12px;
+}
+
+.accordion-bg {
+  background: #FFF !important;
+  color: #333 !important;
 }
 
 .accordion-active {
@@ -176,7 +190,7 @@ main {
 }
 
 .accordion-arrow:hover {
-  color: var(--gray-text, #AEAEAE);
+  color: var(--akcent, #20BBFE);
 }
 
 .grooming-heading p {
@@ -240,8 +254,12 @@ main {
 .accordion-arrow_open {
   display: flex;
   justify-content: space-between;
-  color: var(--white, #FFF);
+  color: inherit;
   width: 100%;
+}
+
+.accordion-arrow_open:hover {
+  color: inherit;
 }
 
 .grooming-img {
@@ -252,7 +270,6 @@ main {
 
 .grooming-img img {
   width: 100%;
-  height: 100%;
   position: static;
 }
 
@@ -335,7 +352,7 @@ main {
   border: none;
   margin-top: 40px;
   cursor: pointer;
-  margin-top: 50px;
+  margin-top: 33px;
   transition: background 2s;
   opacity: 1;
   transition: opacity 0.1s;
@@ -423,6 +440,7 @@ main {
   display: flex;
   justify-content: space-around;
   margin-top: 35px;
+  margin-left: 20px;
   align-items: center;
 }
 
@@ -487,7 +505,17 @@ main {
 }
 
 .swiper-slide_feedback {
-  margin: 21px 0 0 36px;
+  margin: 21px 36px;
+}
+
+.swiper-slide_feedback h3 {
+  font-size: 22px;
+  line-height: 130%;
+}
+
+.swiper-slide_feedback p {
+  font-size: 14px;
+  line-height: 130%;
 }
 
 .swiper-pagination {
@@ -726,7 +754,6 @@ main {
 .politic {
   display: flex;
   justify-content: right;
-  text-decoration: none;
   color: #656565;
   margin-top: 25px;
 }
@@ -735,6 +762,16 @@ main {
   .medical-care_heading,
   .staff-heading {
     align-items: center !important;
+  }
+  .staff-card_header {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  .swiper-slide {
+    width: 33% !important;
   }
 }
 @media screen and (max-width: 1199.98px) {
@@ -838,7 +875,7 @@ main {
     width: 100%;
   }
   .services-panel {
-    width: 100%;
+    /* width: 100%; */
   }
   .services-panel p {
     width: 100%;
@@ -860,7 +897,7 @@ main {
   }
   .grooming-accordion {
     display: flex;
-    width: 370px;
+    width: 100%;
     align-items: center;
     margin: 0;
   }
@@ -977,17 +1014,19 @@ main {
   }
   .feedback-footer {
     display: block;
-    margin-top: 30px;
     position: relative;
+    margin-top: 30px;
+    margin-left: 10px;
   }
-  .feedback-footer p {
+  .feedback-footer_text {
     color: var(--white, #FFF) !important;
     position: absolute;
+    bottom: 7px;
   }
   .swiper-pagination {
-    position: absolute;
-    left: 150px !important;
+    left: 265px !important;
     bottom: 18px !important;
+    width: auto !important;
   }
   .faq {
     display: flex;
@@ -1007,7 +1046,7 @@ main {
     height: 376px;
   }
   .faq-accordion {
-    width: 370px;
+    width: 100%;
     margin: 8px 0 0 0;
   }
   .faq-accordion img {
@@ -1037,7 +1076,6 @@ main {
     background-size: contain;
   }
   .contacts-wrapper_form {
-    margin-left: auto;
     max-width: 100%;
   }
   .contacts-wrapper_form form {
@@ -1046,8 +1084,11 @@ main {
     align-items: center;
     max-width: 100%;
   }
+  .contacts-wrapper_form__links {
+    margin-top: 0;
+  }
   .contacts-wrapper_form p {
-    margin: 47px 0 0 0;
+    margin: 42px 0 17px 0;
   }
   .contacts-wrapper form {
     margin-top: 26px;
@@ -1060,9 +1101,20 @@ main {
     max-width: 88%;
   }
   .contacts-wrapper_map {
-    max-width: 328px;
+    width: 88%;
+    min-height: 416px;
     padding-bottom: 21px;
     border-radius: 12px;
-    margin: 0;
+    margin: 31px 22px 22px 22px;
+  }
+  .contacts-wrapper_form__info {
+    margin-top: 22px;
+  }
+  .contacts-wrapper_form__info_adress a {
+    line-height: 120%;
+  }
+  .politic {
+    margin-top: 20px;
+    width: 100%;
   }
 }/*# sourceMappingURL=main.css.map */
