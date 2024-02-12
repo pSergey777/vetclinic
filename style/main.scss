@@ -99,6 +99,7 @@ margin: 36px 0 0 43px;
 
 .services{
     width: 38%;
+
     // max-height: 571px;
     display: flex;
     flex-direction: column;
@@ -108,22 +109,43 @@ margin: 36px 0 0 43px;
     border-radius: 12px;
     // justify-content: center;
 }
+.services-wrapper_accordion{
+    height: 537px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
 
 .services h3{
     color: var(--text, #656565);
-    margin-bottom: 70px;
+    margin-bottom: 44px;
+
 }
 
 .services-accordion{
     display: flex;
     flex-direction: column;
+    transition: max-height 0.5s;
 }
 
 .services-accordion_data{
     // padding-left: 42px;
-    margin-bottom: 26px;
-    border-bottom: 1px solid #F5F5F5;
+    // border-bottom: 2px solid #F5F5F5;
 }
+
+.services-accordion_data::after {
+    content: '';
+    max-width: 402px;
+    height: 5px;
+    background-color: black;
+    /* float: none; */
+    display: flex;
+    justify-content: center;
+    margin-left: 43px;
+    height: 1px; /* толщина outline */
+    background-color: #F5F5F5; /* цвет outline */
+  }
 
 .medical-care button {
     padding: 0px 7px 0px 43px;
@@ -135,14 +157,14 @@ margin: 36px 0 0 43px;
 }
 
 .services-panel {
-    padding: 0 18px 35px 43px;
+    padding: 0 18px 0 43px;
     display: none;
     background: var(--akcent, #20BBFE);
     overflow: hidden;
     border-radius:0 0 12px 12px;
-
-    // transition: 0.4s;
+    max-height: 250px;
 }
+
 
 .services-panel_bg{
     background: #ffffff;
@@ -174,6 +196,8 @@ margin: 36px 0 0 43px;
 .accordion-bg{
     background: #FFF !important;
     color: #333 !important;
+    margin-top: 0px !important;
+    padding-bottom: 0 !important;
 }
 
 .accordion-active{
@@ -184,6 +208,8 @@ margin: 36px 0 0 43px;
     align-items: center;
     justify-content: space-between;
     border-radius: 12px 12px 0 0;
+    margin-top: 10px;
+    padding-bottom: 20px ;
 }
 
 .accordion p {
@@ -199,10 +225,27 @@ margin: 36px 0 0 43px;
     font-size: 16px;
 }
 
-.accordion-arrow:hover{
+.accordion-bg:hover .accordion-arrow,
+.accordion-bg:hover .accordion-arrow svg path{
     color: var(--akcent, #20BBFE);
+    fill: #20BBFE;
+    transition: color, fill 0.3s, 0.3s; /* добавляем плавный переход при hover */
 }
 
+.accordion-arrow svg {
+    margin-right: 38px;
+}
+
+
+
+
+
+
+.accordion-bg:hover .accordion-arrow,
+.accordion-bg:hover .accordion-arrow svg path{
+    color: var(--akcent, #20BBFE);
+    fill: #20BBFE;
+}
 
 
 
@@ -230,6 +273,7 @@ justify-content: space-between;
 align-items: center;
 width: 100%;
 padding: 24px;
+padding-bottom: 25px;
 }
 
 .grooming-service{
@@ -241,13 +285,15 @@ padding: 24px;
 
 .grooming-accordion {
     width: 62%;
+    height: 404px;
     margin-right: 8px;
     margin-left: 0;
-    border-radius: 102px;
+    border-radius: 12px;
     z-index: 10;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    // overflow: hidden;
 }
 
 .accordion-price{
@@ -258,6 +304,10 @@ padding: 24px;
     padding: 7px 6px;
     margin-left: 17px;
     white-space: pre;
+}
+
+.grooming-accordion_panel{
+    margin-bottom: 10px;
 }
 
 .grooming-accordion_h3{
@@ -283,7 +333,9 @@ line-height: 120%;
   color: inherit;
 }
 
-
+.grooming-accordion_data{
+    // margin-top: 10px;
+}
 
 .grooming-img{
     max-width: 495px;
@@ -356,6 +408,7 @@ margin-top: 15px;
     margin-top: 18px;
     font-size: 14px;
     margin-left: 35px;
+    min-width: 265px;
 }
 
 .staff-card li::marker{
@@ -596,7 +649,7 @@ bottom: 100px !important;
 }
 
 .faq-wrapper img{
-height: 100%;
+// height: 100%;
 }
 
 .swiper-bg{
@@ -628,6 +681,7 @@ height: 100%;
 
 .faq-accordion{
     width: 100%;
+    height: 500px;
     margin-left: 8px;
     display: flex;
     flex-direction: column;
@@ -644,6 +698,10 @@ height: 100%;
 
   .faq-accordion_text{
     font-size: 22px;
+}
+
+.services-accordion_data{
+    margin-bottom: 10px;
 }
 
 
@@ -817,7 +875,7 @@ margin-bottom: 0;
     margin-top: 25px;
 }
 
-@media (min-width: 769px) and (max-width: 1199.98px)  {
+@media (min-width: 350px) and (max-width: 1199.98px)  {
     .medical-care_heading,
     .staff-heading{
         align-items: center !important;

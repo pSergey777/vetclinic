@@ -37,6 +37,37 @@ accordionItems.forEach((item) => {
 });
 
 
+// headerQ.addEventListener('click', () => {
+//   accordionItems.forEach((otherItem) => {
+//     if (otherItem !== item) {
+//       otherItem.classList.remove('accordion-arrow');
+//       otherItem.querySelector('.services-panel').classList.remove('open');
+//     }
+//   });
+
+//   headerQ.classList.toggle('accordion-arrow');
+//   accArr.classList.toggle("accordion-arrow_open")
+
+//   const content = item.querySelector('.services-panel');
+//   if (content.classList.contains('open')) {
+//     content.classList.remove('open');
+//     accImg.src = "/img/Arrow.svg";
+//   } else {
+//     content.classList.add('open');
+//     accImg.src = "/img/Arrow_down.svg";
+//   }
+
+//   document.addEventListener('click', (event) => {
+//     if (!item.contains(event.target)) {
+//       headerQ.classList.remove('accordion-active');
+//       accArr.classList.remove("accordion-arrow_open")
+//       content.style.display = "none";
+//       accImg.src = "/img/Arrow.svg"
+//     }
+//   });
+// });
+// });
+
 
 // const acc = document.getElementsByClassName("accordion");
 // const groo = document.querySelectorAll('.grooming-accordion_panel')
