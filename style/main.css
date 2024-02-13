@@ -98,6 +98,7 @@ main {
 
 .services {
   width: 38%;
+  height: 641px;
   display: flex;
   flex-direction: column;
   margin-left: 8px;
@@ -116,7 +117,7 @@ main {
 
 .services h3 {
   color: var(--text, #656565);
-  margin-bottom: 44px;
+  margin-bottom: 73px;
 }
 
 .services-accordion {
@@ -148,11 +149,16 @@ main {
 
 .services-panel {
   padding: 0 18px 0 43px;
-  display: none;
+  visibility: hidden;
   background: var(--akcent, #20BBFE);
   overflow: hidden;
   border-radius: 0 0 12px 12px;
-  max-height: 250px;
+  max-height: 0;
+  transition: max-height 1s ease;
+}
+
+.services-panel.open {
+  max-height: 250px; /* устанавливаем максимальную высоту элемента */
 }
 
 .services-panel_bg {
@@ -167,8 +173,30 @@ main {
 .services-panel p {
   color: white;
   padding-top: 8px;
+  opacity: 0;
+  animation: appear 1s forwards;
 }
 
+.services-panel.collapsed p {
+  animation: disappear 0.3s forwards;
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes disappear {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
 .accordion {
   background: #FFF;
   color: #333;
@@ -196,7 +224,7 @@ main {
   justify-content: space-between;
   border-radius: 12px 12px 0 0;
   margin-top: 10px;
-  padding-bottom: 20px;
+  padding-bottom: 0px !important;
 }
 
 .accordion p {
@@ -247,6 +275,7 @@ main {
   width: 100%;
   padding: 24px;
   padding-bottom: 25px;
+  padding-left: 32px;
 }
 
 .grooming-service {
@@ -278,6 +307,7 @@ main {
 
 .grooming-accordion_panel {
   margin-bottom: 10px;
+  padding-left: 33px;
 }
 
 .grooming-accordion_h3 {
@@ -625,6 +655,7 @@ main {
 
 .faq-accordion_panel {
   color: var(--white, #FFF);
+  padding-left: 43px;
 }
 
 .faq-accordion_panel p {
@@ -644,8 +675,9 @@ main {
   margin-top: 70px;
   border-radius: 12px;
   border: 1px solid var(--akcent, #20BBFE);
-  background: url("/img/bg_vector_two.png") no-repeat, var(--akcent, #20BBFE);
-  background-size: cover;
+  background: url("/img/vector_foot.svg") no-repeat, var(--akcent, #20BBFE);
+  background-position-y: 85px;
+  background-size: contain;
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -801,7 +833,7 @@ main {
   margin-top: 25px;
 }
 
-@media (min-width: 350px) and (max-width: 1199.98px) {
+@media (min-width: 769px) and (max-width: 1199.98px) {
   .medical-care_heading,
   .staff-heading {
     align-items: center !important;
@@ -816,8 +848,11 @@ main {
   .swiper-slide {
     width: 33% !important;
   }
+  #contacts {
+    width: 100%;
+  }
 }
-@media screen and (max-width: 1199.98px) {
+@media screen and (max-width: 768px) {
   .medical-care_heading,
   .grooming-heading,
   .staff-heading,
@@ -850,6 +885,8 @@ main {
   }
   .consultations h3, .services h3 {
     margin: 34px 0 0px 21px;
+    font-size: 22px;
+    line-height: 120%;
   }
   .medical-care_heading__span {
     color: var(--akcent, #20BBFE);
@@ -917,6 +954,9 @@ main {
     padding: 18px;
     width: 100%;
   }
+  .accordion-arrow svg {
+    margin-right: 0;
+  }
   .services-panel {
     width: 100%;
   }
@@ -927,11 +967,18 @@ main {
     display: flex;
     flex-direction: column;
     max-width: 100%;
+    margin-top: 26px;
   }
   .grooming-wrapper {
     display: flex;
     flex-direction: column-reverse;
     margin-top: 0;
+  }
+  .grooming-heading h2 {
+    width: 80%;
+  }
+  .grooming br {
+    display: none;
   }
   .medical-care_heading p,
   .grooming-heading p {
@@ -943,12 +990,27 @@ main {
     width: 100%;
     align-items: center;
     margin: 0;
+    height: auto;
+  }
+  .grooming-img {
+    width: 100%;
+    height: 370px;
+  }
+  .grooming-img img {
+    width: 100%;
+    height: 100%;
   }
   .grooming-accordion_h3 {
     font-size: 16px;
   }
+  .grooming-accordion_panel {
+    padding-left: 18px;
+  }
   .grooming-accordion img {
     display: none;
+  }
+  .staff-heading_mobile {
+    margin-bottom: 0;
   }
   .staff-cards {
     display: flex;
@@ -983,6 +1045,9 @@ main {
     width: 41px;
     height: 41px;
   }
+  .staff-card_wrapper {
+    padding: 34px 22px;
+  }
   .feedback {
     height: 528px;
   }
@@ -1013,7 +1078,6 @@ main {
   .swiper {
     display: none !important;
     max-height: 252px;
-    margin-left: 10px !important;
   }
   .swiper-mobile {
     display: block !important;
@@ -1064,11 +1128,12 @@ main {
   .feedback-footer_text {
     color: var(--white, #FFF) !important;
     position: absolute;
-    bottom: 7px;
+    bottom: 15px;
+    left: 10px;
   }
   .swiper-pagination {
-    left: 265px !important;
-    bottom: 18px !important;
+    left: 270px !important;
+    bottom: 30px !important;
     width: auto !important;
   }
   .faq {
@@ -1082,14 +1147,15 @@ main {
   .faq-wrapper {
     display: flex;
     flex-direction: column;
-    margin-top: 18px;
+    margin-top: 0;
   }
   .faq-form_reptile {
     max-width: 370px;
-    height: 376px;
+    height: 404px;
   }
   .faq-accordion {
     width: 100%;
+    height: 370px;
     margin: 8px 0 0 0;
   }
   .faq-accordion img {
@@ -1128,10 +1194,10 @@ main {
     max-width: 100%;
   }
   .contacts-wrapper_form__links {
-    margin-top: 0;
+    margin-top: 42px;
   }
   .contacts-wrapper_form p {
-    margin: 42px 0 17px 0;
+    margin: 0 0 17px 0;
   }
   .contacts-wrapper form {
     margin-top: 26px;

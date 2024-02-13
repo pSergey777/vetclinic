@@ -99,7 +99,7 @@ margin: 36px 0 0 43px;
 
 .services{
     width: 38%;
-
+    height: 641px;
     // max-height: 571px;
     display: flex;
     flex-direction: column;
@@ -119,8 +119,7 @@ margin: 36px 0 0 43px;
 
 .services h3{
     color: var(--text, #656565);
-    margin-bottom: 44px;
-
+    margin-bottom: 73px;
 }
 
 .services-accordion{
@@ -158,12 +157,20 @@ margin: 36px 0 0 43px;
 
 .services-panel {
     padding: 0 18px 0 43px;
-    display: none;
+    // display: none;
+    visibility: hidden;
     background: var(--akcent, #20BBFE);
     overflow: hidden;
-    border-radius:0 0 12px 12px;
-    max-height: 250px;
+    border-radius:0 0 12px 12px; 
+    max-height: 0;
+    transition: max-height 1s ease;
 }
+
+.services-panel.open {
+    max-height: 250px ;  /* устанавливаем максимальную высоту элемента */
+  }
+
+
 
 
 .services-panel_bg{
@@ -178,8 +185,32 @@ margin: 36px 0 0 43px;
 .services-panel p {
     color: white;
     padding-top: 8px;
-
+    opacity: 0;
+    animation: appear 1s forwards;
 }
+
+.services-panel.collapsed p {
+    animation: disappear 0.3s forwards;
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes disappear {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
 
 .accordion {
     background: #FFF;
@@ -192,6 +223,8 @@ margin: 36px 0 0 43px;
     // transition: 0.4s;
     border-radius: 12px;
 }
+
+
 
 .accordion-bg{
     background: #FFF !important;
@@ -209,7 +242,7 @@ margin: 36px 0 0 43px;
     justify-content: space-between;
     border-radius: 12px 12px 0 0;
     margin-top: 10px;
-    padding-bottom: 20px ;
+    padding-bottom: 0px !important;
 }
 
 .accordion p {
@@ -274,6 +307,7 @@ align-items: center;
 width: 100%;
 padding: 24px;
 padding-bottom: 25px;
+padding-left: 32px;
 }
 
 .grooming-service{
@@ -308,6 +342,7 @@ padding-bottom: 25px;
 
 .grooming-accordion_panel{
     margin-bottom: 10px;
+    padding-left: 33px;
 }
 
 .grooming-accordion_h3{
@@ -690,6 +725,7 @@ bottom: 100px !important;
 
 .faq-accordion_panel{
     color: var(--white, #FFF);
+    padding-left: 43px;
 }
 
 .faq-accordion_panel p{
@@ -712,8 +748,9 @@ bottom: 100px !important;
     margin-top: 70px;
     border-radius: 12px;
     border: 1px solid var(--akcent, #20BBFE);
-    background: url('/img/bg_vector_two.png') no-repeat, var(--akcent, #20BBFE);
-    background-size: cover;
+    background: url('/img/vector_foot.svg') no-repeat, var(--akcent, #20BBFE);
+    background-position-y: 85px;
+    background-size: contain;
     display: flex;
     align-items: center;
     justify-content:space-around;
@@ -875,7 +912,7 @@ margin-bottom: 0;
     margin-top: 25px;
 }
 
-@media (min-width: 350px) and (max-width: 1199.98px)  {
+@media (min-width: 769px) and (max-width: 1199.98px)  {
     .medical-care_heading,
     .staff-heading{
         align-items: center !important;
@@ -892,11 +929,14 @@ margin-bottom: 0;
     .swiper-slide {
         width: 33% !important;
     }
+    #contacts{
+        width: 100%;
+    }
   }
 
 
-@media screen and (max-width: 1199.98px) {
-// @media screen and (max-width: 768px) {
+// @media screen and (max-width: 1199.98px) {
+@media screen and (max-width: 768px) {
 
     .medical-care_heading,
 .grooming-heading,
@@ -932,6 +972,8 @@ margin-bottom: 0;
 
 .consultations h3, .services h3{
     margin: 34px 0 0px  21px;
+    font-size: 22px;
+    line-height: 120%;
 }
 
 
@@ -1026,6 +1068,10 @@ content: 'Проведение детального осмотра и обсуж
     // background: #FFF;
 }
 
+.accordion-arrow svg {
+    margin-right: 0;
+}
+
 
 .services-panel{
     // background: #FFF;
@@ -1051,6 +1097,7 @@ content: 'Проведение детального осмотра и обсуж
     display: flex;
     flex-direction: column;
     max-width: 100%;
+    margin-top: 26px;
 }
 
 .grooming-wrapper{
@@ -1059,13 +1106,18 @@ content: 'Проведение детального осмотра и обсуж
     margin-top: 0;
 }
 
+.grooming-heading h2{
+width: 80%;
+}
+
+.grooming br{
+display: none;
+}
+
 .medical-care_heading p,
 .grooming-heading p{
     font-size: 14px;
     margin-left: 0;
-}
-
-.grooming-img{
 }
 
 .grooming-accordion{
@@ -1073,7 +1125,20 @@ content: 'Проведение детального осмотра и обсуж
 width: 100%;
 align-items: center;
 margin: 0;
+height: auto;
 }
+
+.grooming-img{
+    width: 100%;
+    height: 370px;
+    }
+
+
+.grooming-img img{
+width: 100%;
+height: 100%;
+}
+
 
 .grooming-accordion_h3{
     font-size: 16px;
@@ -1081,8 +1146,18 @@ margin: 0;
     
 }
 
+.grooming-accordion_panel {
+    padding-left: 18px;
+}
+
 .grooming-accordion img{
 display: none;
+}
+
+// --------------------staf
+
+.staff-heading_mobile{
+    margin-bottom: 0;
 }
 
 .staff-cards{
@@ -1129,6 +1204,10 @@ margin-left: 50px;
     height: 41px;
 }
 
+.staff-card_wrapper {
+padding: 34px 22px;
+}
+
 .feedback{
 height: 528px;
     }
@@ -1168,7 +1247,7 @@ display: none;
 .swiper{
     display: none !important;
     max-height: 252px;
-    margin-left: 10px !important;
+    // margin-left: 10px !important;
 }
 
 .swiper-mobile{
@@ -1236,7 +1315,8 @@ display: none;
 .feedback-footer_text{
     color: var(--white, #FFF) !important;
     position: absolute;
-    bottom: 7px;
+    bottom: 15px;
+    left: 10px;
 }
 
 .feedback-footer svg{
@@ -1244,27 +1324,13 @@ display: none;
 }
 
 .swiper-pagination{
-    left: 265px !important;
-    bottom: 18px !important;
+    left: 270px !important;
+    bottom: 30px !important;
     width: auto !important;
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+// ------------------faq
 .faq{
     display: flex;
     flex-direction: column;
@@ -1278,18 +1344,18 @@ display: none;
 .faq-wrapper{
     display: flex;
     flex-direction: column;
-    margin-top: 18px;
+    margin-top: 0;
 }
 
 .faq-form_reptile{
     max-width: 370px;
-    height: 376px;
+    height: 404px;
 }
 
 .faq-accordion {
     width: 100%;
+    height: 370px;
     margin: 8px 0 0 0;
-
 }
 
 .faq-accordion img{
@@ -1337,12 +1403,11 @@ display: none;
 }
 
 .contacts-wrapper_form__links {
-    margin-top: 0;
-
+    margin-top: 42px;
 }
 
 .contacts-wrapper_form p{
-    margin: 42px 0 17px 0;
+    margin: 0 0 17px 0;
 }
 
 .contacts-wrapper form{

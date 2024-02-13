@@ -11,30 +11,81 @@ accordionItems.forEach((item) => {
     accordionItems.forEach((otherItem) => {
 
       if (otherItem !== item) {
+        content.classList.remove('open');
+        content.classList.add('collapsed');
         otherItem.classList.remove('accordion-active');
       }
     });
     headerQ.classList.toggle('accordion-active');
-    accArr.classList.toggle("accordion-arrow_open")
-    if (content.style.display === "block") {
-      content.style.display = "none";
-      accImg.src = "/img/Arrow.svg"
-    } else {
-      content.style.display = "block";
-      accImg.src = "/img/Arrow_down.svg"
+    accArr.classList.toggle("accordion-arrow_open");
 
+    if (content.style.visibility === "visible") {
+      content.style.visibility = "hidden";
+      content.classList.add('collapsed');
+      accImg.src = "/img/Arrow.svg";
+    } else {
+      content.classList.add('open');
+      content.classList.remove('collapsed');
+      content.style.visibility = "visible";
+      accImg.src = "/img/Arrow_down.svg";
     }
   });
 
   document.addEventListener('click', (event) => {
     if (!item.contains(event.target)) {
+      content.classList.remove('open');
+      content.classList.add('collapsed');
       headerQ.classList.remove('accordion-active');
       accArr.classList.remove("accordion-arrow_open")
-      content.style.display = "none";
+      content.style.visibility = "hidden";
       accImg.src = "/img/Arrow.svg"
     }
   });
 });
+
+
+
+
+
+// const accordionItems = document.querySelectorAll('.services-accordion');
+
+// accordionItems.forEach((item) => {
+//   const headerQ = item.querySelector('.accordion');
+//   const content = item.querySelector('.services-panel');
+//   const accArr = item.querySelector('.accordion-arrow')
+//   const accImg = item.querySelector('img')
+
+
+//   headerQ.addEventListener('click', () => {
+//     accordionItems.forEach((otherItem) => {
+
+//       if (otherItem !== item) {
+//         content.classList.remove('open');
+//         otherItem.classList.remove('accordion-active');
+//       }
+//     });
+//     headerQ.classList.toggle('accordion-active');
+//     accArr.classList.toggle("accordion-arrow_open")
+//     if (content.style.display === "block") {
+//       content.style.display = "none";
+//       accImg.src = "/img/Arrow.svg"
+//     } else {
+//       content.classList.add('open');
+//       content.style.display = "block";
+//       accImg.src = "/img/Arrow_down.svg"
+//     }
+//   });
+
+//   document.addEventListener('click', (event) => {
+//     if (!item.contains(event.target)) {
+//       content.classList.remove('open');
+//       headerQ.classList.remove('accordion-active');
+//       accArr.classList.remove("accordion-arrow_open")
+//       content.style.display = "none";
+//       accImg.src = "/img/Arrow.svg"
+//     }
+//   });
+// });
 
 
 // headerQ.addEventListener('click', () => {

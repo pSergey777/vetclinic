@@ -17,9 +17,9 @@ header{
     border-radius: 12px;
     width: 100%;
     height: 69px;
-    z-index: 1;
+    // z-index: 1;
     background: var(--white, #FFF);
-    padding-top: 20px;
+    padding-top: 40px;
 }
 
 .navigation{
@@ -27,6 +27,10 @@ header{
     justify-content: space-between;
     width: 100%;
     margin-right: 20px;
+}
+
+.nav-btn{
+    display: none;
 }
 
 .header-top nav{
@@ -81,7 +85,7 @@ color: #19BAFF;
     width: 100%;
     height: 562px;
     background: var(--white, #FFF);
-    margin-top: -30px;
+    // margin-top: -30px;
 }
 
 .header-middle_mobile{
@@ -204,10 +208,8 @@ padding: 20px 27px;
 
 
 
-.header-bottom_info__price img,
-.header-bottom_info__appointment img{
-    float: bottom;
-    float: right;
+.header-bottom_info__price svg ,
+.header-bottom_info__appointment svg{
     width: 16px;
     height: 16px;
     position: absolute;
@@ -215,6 +217,14 @@ padding: 20px 27px;
     right: 0;
     margin: 26px;
 }
+
+.header-bottom_info__price:hover svg path {
+    fill: rgb(32, 187, 254); 
+  }
+
+  .header-bottom_info__appointment:hover svg path {
+    fill: rgb(32, 187, 254); 
+  }
 
 .header-middle_img{
     z-index: 1;
@@ -364,34 +374,99 @@ padding-bottom: 0;
 
     .header-top a{
         margin-left: 0;
+
     }
 
     .navigation {
         width: auto;
+ margin-right: 0;
+    }
+
+    .nav-btn{
+        margin-right: 0;
+        position: relative;
+        display: block;
+        z-index: 100;
+        border: none;
     }
 
     .header-top nav{
-        content: url('/img/burger.svg');
-        margin-right: 0;
+        display: none;
+        width: 198px;
+        height: 155px;
+        background: rgb(255, 255, 255);
+        position: absolute;
+        right: -8px;
+        top: 91px;
+        flex-direction: column;
+        // align-items: center;
+        // justify-content: space-around;
+        border-radius: 12px  0 0 12px;
+        z-index: 100;
+    }
+    .header-top a {
+        margin: 0;
+        margin-left: 24px;
+        margin-top: 17px;
+        width: 65%;
+    }
+
+    .header-top nav a {
+        margin: 0;
+        margin-left: 24px !important;
+        margin-top: 17px !important;
+
+    }   
+    .header-top nav a:first-child{
+        margin-top: 21px !important;
+        height: 11px;
+    }
+
+    .header-top a:first-child{
+        margin-top: 10px;
+        margin-left: 0;
+        width: 95px;
+        height: 43px;
+    }
+
+    .header-top p {
+        font-size: 16px;
+        line-height: 120%;
+    }
+
+    .overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.25);
+        z-index: 11;
+        display: none;
+
     }
 
 
     .img-logo{
         width: 94.946px;
         height: 42.804px;
-
         margin-bottom: 35px;
     }
 
     .header-top img{
     width: 100%;
     margin: 0;
-    
+    background: rgb(255, 255, 255);
     }
 
     .header-top a:last-child{
         display: none;
     }
+    .header-top nav a:last-child{
+        display: block;
+    }
+
+
 
     .header-middle{
         height: auto;
@@ -403,6 +478,7 @@ padding-bottom: 0;
         font-size: 24px;
         width: auto;
         align-self: start;
+        z-index: auto;
     }
 
     .header-middle p{
@@ -455,7 +531,7 @@ padding-bottom: 0;
     .header-bottom_info__appointment p, 
     .header-bottom_info__sale p {
         padding: 25px;
-        width: 100%;
+        width: 90%;
     }
 
     .header-bottom img{
