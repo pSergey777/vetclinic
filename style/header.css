@@ -101,7 +101,7 @@ header {
   margin-top: 0px;
 }
 
-.header-middle button {
+.header-middle__btn {
   display: flex;
   width: 209px;
   height: 55px;
@@ -111,7 +111,7 @@ header {
   gap: 7px;
   flex-shrink: 0;
   border-radius: 12px;
-  margin: 70px 0 0 64px;
+  margin: 70px 0 58px 61px;
   color: var(--white, #FFF);
   text-align: center;
   border: none;
@@ -120,9 +120,10 @@ header {
   transition: background 2s;
   opacity: 1;
   transition: opacity 0.1s;
+  text-decoration: none;
 }
 
-.header-middle button:hover {
+.header-middle__btn:hover {
   background: linear-gradient(to bottom left, #19BAFF, #8BD5FF) !important;
   opacity: 1;
   transition-delay: 0.1s;
@@ -166,7 +167,6 @@ header {
 .header-bottom_info__appointment p,
 .header-bottom_info__sale p {
   color: var(--gray-text, #AEAEAE);
-  font-size: 16px;
   font-style: normal;
   font-weight: 400;
   line-height: 122%;
@@ -185,7 +185,7 @@ header {
 .slide-footnote {
   font-size: 14px;
   font-weight: 400;
-  color: rgb(255, 255, 255);
+  color: #AEE6FF !important;
   opacity: 0.8;
   width: 250px;
 }
@@ -358,7 +358,7 @@ header {
     background: rgb(255, 255, 255);
     position: absolute;
     right: -8px;
-    top: 91px;
+    top: 62px;
     flex-direction: column;
     border-radius: 12px 0 0 12px;
     z-index: 100;
@@ -417,6 +417,10 @@ header {
   .header-middle {
     height: auto;
     align-items: center;
+  }
+  .header-middle__btn {
+    width: 90%;
+    margin-left: 0;
   }
   .header-middle h1 {
     margin: 50px 0 0 21px;

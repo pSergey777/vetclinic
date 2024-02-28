@@ -110,7 +110,7 @@ margin: 36px 0 0 43px;
     // justify-content: center;
 }
 .services-wrapper_accordion{
-    height: 537px;
+    height: 460px;
     overflow: hidden;
     display: flex;
     flex-direction: column;
@@ -186,7 +186,7 @@ margin: 36px 0 0 43px;
     color: white;
     padding-top: 8px;
     opacity: 0;
-    animation: appear 1s forwards;
+    animation: appear 0.5s forwards;
 }
 
 .services-panel.collapsed p {
@@ -198,13 +198,13 @@ margin: 36px 0 0 43px;
         opacity: 0;
     }
     to {
-        opacity: 1;
+        opacity: 0.5;
     }
 }
 
 @keyframes disappear {
     from {
-        opacity: 1;
+        opacity: 0.3;
     }
     to {
         opacity: 0;
@@ -257,6 +257,17 @@ margin: 36px 0 0 43px;
     color: rgb(101, 101, 101);
     font-size: 16px;
 }
+
+.accordion-arrow{
+    display: flex;
+    justify-content: space-between;
+    color: rgb(101, 101, 101);
+    font-size: 16px;
+}
+.accordion-arrow p{
+    font-size: 20px;
+}
+
 
 .accordion-bg:hover .accordion-arrow,
 .accordion-bg:hover .accordion-arrow svg path{
@@ -347,7 +358,7 @@ padding-left: 32px;
 
 .grooming-accordion_h3{
     color: var(--text, #656565);
-font-size: 28px;
+font-size: 23px;
 font-style: normal;
 font-weight: 500;
 line-height: 120%;
@@ -451,7 +462,7 @@ margin-top: 15px;
     margin-right: 0;
 }
 
-.staff button{
+.appointment-btn{
     display: flex;
     width: 209px;
     height: 55px;
@@ -472,11 +483,22 @@ margin-top: 15px;
     transition: opacity 0.1s;
 }
 
-.staff button:hover{
+.appointment-btn{
+text-decoration: none;
+color: #ffffff;
+}
+
+.appointment-btn:hover{
     background: linear-gradient(to bottom left, #19BAFF , #8BD5FF) !important;
     opacity: 1;
     transition-delay: 0.1s;
 }
+
+// .staff button:hover{
+//     background: linear-gradient(to bottom left, #19BAFF , #8BD5FF) !important;
+//     opacity: 1;
+//     transition-delay: 0.1s;
+// }
 
 .feedback{
     width: 100%;
@@ -540,9 +562,8 @@ display: none !important;
 }
 
 .swiper-slide{
-width: 580px !important;
+// width: 580px !important;
 border-radius: 20px;
-
 margin-right: 9px;
 display: initial !important;
 background: #ffffff;
@@ -577,7 +598,7 @@ margin-right: 15px;
 
 .swiper-slide_raiting{
     display: flex;
-    margin: 64px 0 0 36px;
+    margin: 43px 0 0 36px;
 }
 
 .swiper-slide_names__clien-name{
@@ -585,6 +606,14 @@ margin-right: 15px;
     align-items: start;
     justify-content: center;
     flex-direction: column;
+}
+
+.swiper-slide_names__clien-name h4{
+    font-size: 16px;
+}
+
+.swiper-slide_names__clien-name p, .swiper-slide_date{
+    font-size: 14px;
 }
 
 // ------------------------ Stars
@@ -640,7 +669,7 @@ margin-right: 15px;
 // ------------
 
 .swiper-slide_feedback{
-    margin: 21px 36px;
+    margin: 13px 36px;
 }
 
 .swiper-slide_feedback h3{
@@ -683,9 +712,13 @@ bottom: 100px !important;
     position: relative;
 }
 
-.faq-wrapper img{
-// height: 100%;
+.faq-wrapper_img{
+height: 500px;
 }
+
+.faq-wrapper_img img{
+    height: 548px;
+    }
 
 .swiper-bg{
     position: absolute;
@@ -716,20 +749,25 @@ bottom: 100px !important;
 
 .faq-accordion{
     width: 100%;
-    height: 500px;
+    // height: 500px;
+    // min-height: 100%;
     margin-left: 8px;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 
 .faq-accordion_panel{
     color: var(--white, #FFF);
-    padding-left: 43px;
+    padding-left: 38px;
 }
 
 .faq-accordion_panel p{
     width: 100%;
+}
+
+.faq-accordion_panel li:last-child{
+margin-bottom: 29px;
 }
 
   .faq-accordion_text{
@@ -737,11 +775,15 @@ bottom: 100px !important;
 }
 
 .services-accordion_data{
-    margin-bottom: 10px;
+    // margin-bottom: 10px;
 }
 
 
 // -------------------------- Contacts
+
+.contacts-header p{
+width: 33%;
+}
 
 .contacts-wrapper{
     height: 511px;
@@ -753,13 +795,14 @@ bottom: 100px !important;
     background-size: contain;
     display: flex;
     align-items: center;
-    justify-content:space-around;
+    justify-content:space-between;
 }
 
 .contacts-wrapper_form{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    margin-left: 22px;
 
 }
 
@@ -775,7 +818,6 @@ max-width: 311px;
     max-width: 100%;
     background: #ffffff;
     border-radius: 12px;
-
 }
 
 .contacts-wrapper_form__info_wrapper p{
@@ -786,10 +828,12 @@ color: #656565 !important;
 .contacts-wrapper_form__info_adress{
     display: flex;
     flex-direction: column;
+    width: 100%;
 }
 
 .contacts-wrapper_form__info_adress img{
     margin-right: 7px;
+    margin-top: -5px;
     width: 23px;
     height: 23px;
 }
@@ -808,7 +852,7 @@ font-size: 16px;
 }
 
 .contacts-wrapper_form__info_adress_wrapper:last-child{
-    margin-bottom: 32px;
+    margin-bottom: 15px;
 }
 
 
@@ -816,7 +860,7 @@ font-size: 16px;
 .contacts-wrapper_form p{
     font-size: 14px;
     color: var(--white, #FFF);
-    margin-bottom: 30px;
+    // margin-bottom: 30px;
     font-size: 18px;
 }
 
@@ -849,13 +893,13 @@ font-size: 16px;
     border-radius: 12px;
 }
 
-.contacts-wrapper_form button{
+.contacts-wrapper_form__btn{
 display: flex;
 flex-direction: column;
 justify-content: center;
 align-items: center;
-max-width: 226px;
-max-height: 55px;
+width: 226px;
+height: 55px;
 border-radius: 12px;
 background: var(--akcent, #20BBFE);
 border: 3px solid #FFF;
@@ -865,17 +909,18 @@ transition: background 2s;
 opacity: 1;
 transition: opacity 0.1s;
 margin-bottom: 0;
+text-decoration: none;
 }
 
-.contacts-wrapper_form button:hover{
+.contacts-wrapper_form__btn:hover{
 background: linear-gradient(to bottom left, #19BAFF , #8BD5FF) !important;
 opacity: 1;
 transition-delay: 0.1s;
 }
 
 .contacts-wrapper_form__links{
-    margin-top: 50px;
-    margin-left: 17px;
+    margin-top: 35px;
+    margin-bottom: 35px;
 }
 
 .contacts-wrapper_form__links p{
@@ -897,8 +942,10 @@ margin-bottom: 0;
 
 
 .contacts-wrapper_map{
-    width: 801px;
+    // width: 801px;
+    width: 65%;
     height: 467px;
+    margin-right: 20px;
 }
 
 .contacts-wrapper_map iframe{
@@ -912,7 +959,7 @@ margin-bottom: 0;
     margin-top: 25px;
 }
 
-@media (min-width: 769px) and (max-width: 1199.98px)  {
+@media (min-width: 768px) and (max-width: 1199.98px)  {
     .medical-care_heading,
     .staff-heading{
         align-items: center !important;
@@ -927,16 +974,47 @@ margin-bottom: 0;
     }
 
     .swiper-slide {
-        width: 33% !important;
+        // width: 33% !important;
     }
     #contacts{
         width: 100%;
     }
+
+    .staff-card li {
+        margin-top: 18px;
+        font-size: 14px;
+        margin-left: 0; 
+        width: 100%;
+        min-width: 0;
+    }
+
+    .staff-card li {
+        width: 100%;
+    }
+
+    .staff-card_wrapper {
+        justify-content: space-between;
+        height: 100%;
   }
+
+  .consultations {
+    background-size: contain, contain;
+    background-position-y: 105px, 178px;
+  }
+
+  .header-bottom_info__sale {
+    width: 70%;
+}
+
+.swiper-slide{
+    // width: auto !important;
+}
+
+}
 
 
 // @media screen and (max-width: 1199.98px) {
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767.98px) {
 
     .medical-care_heading,
 .grooming-heading,
@@ -965,7 +1043,7 @@ margin-bottom: 0;
     color: var(--text, #575757);                
     font-size: 22px;
     font-style: normal;
-    font-weight: 500;
+    font-weight: 700;
     line-height: 120%;
     margin-bottom: 32px;
 }
@@ -975,10 +1053,6 @@ margin-bottom: 0;
     font-size: 22px;
     line-height: 120%;
 }
-
-
-
-
 
 .medical-care_heading__span {
     color: var(--akcent, #20BBFE); 
@@ -1006,16 +1080,23 @@ background-size:  90%, 185% ;
 
 .services{
     width: 100%;
+    height: auto;
     margin-left: 0;
     margin-top: 8px;
     border-radius: 12px;
+
 }
 
 .services h3{
+width: auto;
+margin-bottom: 72px;
+}
 
-    width: auto;
-    margin-bottom: 72px;
-    }
+.services-wrapper_accordion {
+    height: auto;
+    overflow: auto;
+}
+
 
 .services img{
 display: none;
@@ -1029,7 +1110,7 @@ display: none;
 }
 
 .services-accordion_data{
-margin: 0;
+// margin: 0;
 }
 
 
@@ -1077,6 +1158,7 @@ content: 'Проведение детального осмотра и обсуж
     // background: #FFF;
     // color: var(--gray-text, #AEAEAE);
     width: 100%;
+    padding-left: 20px;
 }
 
 .services-panel p{
@@ -1148,6 +1230,7 @@ height: 100%;
 
 .grooming-accordion_panel {
     padding-left: 18px;
+    margin-bottom: 0;
 }
 
 .grooming-accordion img{
@@ -1225,6 +1308,7 @@ padding-bottom: 0;
     font-size: 24px;
 font-weight: 600;
 width: 60%;
+margin-bottom: 0;
 }
 
 .feedback-header_text{
@@ -1246,7 +1330,8 @@ display: none;
 
 .swiper{
     display: none !important;
-    max-height: 252px;
+    // max-height: 252px;
+    max-height: 308px;
     // margin-left: 10px !important;
 }
 
@@ -1255,7 +1340,7 @@ display: none;
 }
 
 .swiper-slide{
-    width: 90% !important;
+    // width: 95% !important;
 }
 
 .swiper-slide_raiting{
@@ -1324,7 +1409,7 @@ display: none;
 }
 
 .swiper-pagination{
-    left: 270px !important;
+    left: 260px !important;
     bottom: 30px !important;
     width: auto !important;
 }
@@ -1347,6 +1432,18 @@ display: none;
     margin-top: 0;
 }
 
+.faq-wrapper_img{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 100%;
+}
+
+.faq-wrapper img{
+width: 100%;
+height: 100%;
+}
+
 .faq-form_reptile{
     max-width: 370px;
     height: 404px;
@@ -1354,7 +1451,7 @@ display: none;
 
 .faq-accordion {
     width: 100%;
-    height: 370px;
+    // height: 370px;
     margin: 8px 0 0 0;
 }
 
@@ -1376,7 +1473,7 @@ display: none;
 }
 
 .contacts-header p{
-    max-width: 100%;
+    width: 100%;
 }
 
 .contacts-wrapper{
@@ -1386,28 +1483,37 @@ display: none;
     height: auto;
     margin-top: 0;
     border: none;
-    background: url(/img/mob/contacts_bg.png) no-repeat top , var(--akcent, #20BBFE);
+    // background: url(/img/mob/contacts_bg.png) no-repeat top , var(--akcent, #20BBFE);
+    background: var(--akcent, #20BBFE);
     background-size: contain;
     // box-sizing: content-box;
 }
 
 .contacts-wrapper_form{
-    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-left: 0;
 }
 
 .contacts-wrapper_form form{ 
     display: flex;
     flex-direction: column;
     align-items: center;
-    max-width: 100%;
+    width: 100%;
 }
 
 .contacts-wrapper_form__links {
     margin-top: 42px;
+    margin-left: 30px;
+    align-self: flex-start;
 }
 
 .contacts-wrapper_form p{
+    
     margin: 0 0 17px 0;
+    align-self: start;
 }
 
 .contacts-wrapper form{

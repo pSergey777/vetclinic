@@ -1,10 +1,13 @@
 const accordionItems = document.querySelectorAll('.services-accordion');
 
+
+
 accordionItems.forEach((item) => {
   const headerQ = item.querySelector('.accordion');
   const content = item.querySelector('.services-panel');
   const accArr = item.querySelector('.accordion-arrow')
   const accImg = item.querySelector('img')
+
 
 
   headerQ.addEventListener('click', () => {

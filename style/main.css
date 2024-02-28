@@ -108,7 +108,7 @@ main {
 }
 
 .services-wrapper_accordion {
-  height: 537px;
+  height: 460px;
   overflow: hidden;
   display: flex;
   flex-direction: column;
@@ -174,7 +174,7 @@ main {
   color: white;
   padding-top: 8px;
   opacity: 0;
-  animation: appear 1s forwards;
+  animation: appear 0.5s forwards;
 }
 
 .services-panel.collapsed p {
@@ -186,12 +186,12 @@ main {
     opacity: 0;
   }
   to {
-    opacity: 1;
+    opacity: 0.5;
   }
 }
 @keyframes disappear {
   from {
-    opacity: 1;
+    opacity: 0.3;
   }
   to {
     opacity: 0;
@@ -237,6 +237,17 @@ main {
   justify-content: space-between;
   color: rgb(101, 101, 101);
   font-size: 16px;
+}
+
+.accordion-arrow {
+  display: flex;
+  justify-content: space-between;
+  color: rgb(101, 101, 101);
+  font-size: 16px;
+}
+
+.accordion-arrow p {
+  font-size: 20px;
 }
 
 .accordion-bg:hover .accordion-arrow,
@@ -312,7 +323,7 @@ main {
 
 .grooming-accordion_h3 {
   color: var(--text, #656565);
-  font-size: 28px;
+  font-size: 23px;
   font-style: normal;
   font-weight: 500;
   line-height: 120%;
@@ -409,7 +420,7 @@ main {
   margin-right: 0;
 }
 
-.staff button {
+.appointment-btn {
   display: flex;
   width: 209px;
   height: 55px;
@@ -430,7 +441,12 @@ main {
   transition: opacity 0.1s;
 }
 
-.staff button:hover {
+.appointment-btn {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.appointment-btn:hover {
   background: linear-gradient(to bottom left, #19BAFF, #8BD5FF) !important;
   opacity: 1;
   transition-delay: 0.1s;
@@ -495,7 +511,6 @@ main {
 }
 
 .swiper-slide {
-  width: 580px !important;
   border-radius: 20px;
   margin-right: 9px;
   display: initial !important;
@@ -528,7 +543,7 @@ main {
 
 .swiper-slide_raiting {
   display: flex;
-  margin: 64px 0 0 36px;
+  margin: 43px 0 0 36px;
 }
 
 .swiper-slide_names__clien-name {
@@ -536,6 +551,14 @@ main {
   align-items: start;
   justify-content: center;
   flex-direction: column;
+}
+
+.swiper-slide_names__clien-name h4 {
+  font-size: 16px;
+}
+
+.swiper-slide_names__clien-name p, .swiper-slide_date {
+  font-size: 14px;
 }
 
 .raiting {
@@ -577,7 +600,7 @@ main {
 }
 
 .swiper-slide_feedback {
-  margin: 21px 36px;
+  margin: 13px 36px;
 }
 
 .swiper-slide_feedback h3 {
@@ -618,6 +641,14 @@ main {
   position: relative;
 }
 
+.faq-wrapper_img {
+  height: 500px;
+}
+
+.faq-wrapper_img img {
+  height: 548px;
+}
+
 .swiper-bg {
   position: absolute;
   display: block;
@@ -646,28 +677,31 @@ main {
 
 .faq-accordion {
   width: 100%;
-  height: 500px;
   margin-left: 8px;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 
 .faq-accordion_panel {
   color: var(--white, #FFF);
-  padding-left: 43px;
+  padding-left: 38px;
 }
 
 .faq-accordion_panel p {
   width: 100%;
 }
 
+.faq-accordion_panel li:last-child {
+  margin-bottom: 29px;
+}
+
 .faq-accordion_text {
   font-size: 22px;
 }
 
-.services-accordion_data {
-  margin-bottom: 10px;
+.contacts-header p {
+  width: 33%;
 }
 
 .contacts-wrapper {
@@ -680,13 +714,14 @@ main {
   background-size: contain;
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 
 .contacts-wrapper_form {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  margin-left: 22px;
 }
 
 .contacts-wrapper_form__info {
@@ -709,10 +744,12 @@ main {
 .contacts-wrapper_form__info_adress {
   display: flex;
   flex-direction: column;
+  width: 100%;
 }
 
 .contacts-wrapper_form__info_adress img {
   margin-right: 7px;
+  margin-top: -5px;
   width: 23px;
   height: 23px;
 }
@@ -730,13 +767,12 @@ main {
 }
 
 .contacts-wrapper_form__info_adress_wrapper:last-child {
-  margin-bottom: 32px;
+  margin-bottom: 15px;
 }
 
 .contacts-wrapper_form p {
   font-size: 14px;
   color: var(--white, #FFF);
-  margin-bottom: 30px;
   font-size: 18px;
 }
 
@@ -775,13 +811,13 @@ main {
   border-radius: 12px;
 }
 
-.contacts-wrapper_form button {
+.contacts-wrapper_form__btn {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  max-width: 226px;
-  max-height: 55px;
+  width: 226px;
+  height: 55px;
   border-radius: 12px;
   background: var(--akcent, #20BBFE);
   border: 3px solid #FFF;
@@ -791,17 +827,18 @@ main {
   opacity: 1;
   transition: opacity 0.1s;
   margin-bottom: 0;
+  text-decoration: none;
 }
 
-.contacts-wrapper_form button:hover {
+.contacts-wrapper_form__btn:hover {
   background: linear-gradient(to bottom left, #19BAFF, #8BD5FF) !important;
   opacity: 1;
   transition-delay: 0.1s;
 }
 
 .contacts-wrapper_form__links {
-  margin-top: 50px;
-  margin-left: 17px;
+  margin-top: 35px;
+  margin-bottom: 35px;
 }
 
 .contacts-wrapper_form__links p {
@@ -818,8 +855,9 @@ main {
 }
 
 .contacts-wrapper_map {
-  width: 801px;
+  width: 65%;
   height: 467px;
+  margin-right: 20px;
 }
 
 .contacts-wrapper_map iframe {
@@ -833,7 +871,7 @@ main {
   margin-top: 25px;
 }
 
-@media (min-width: 769px) and (max-width: 1199.98px) {
+@media (min-width: 768px) and (max-width: 1199.98px) {
   .medical-care_heading,
   .staff-heading {
     align-items: center !important;
@@ -845,14 +883,32 @@ main {
     display: flex;
     justify-content: center;
   }
-  .swiper-slide {
-    width: 33% !important;
-  }
   #contacts {
     width: 100%;
   }
+  .staff-card li {
+    margin-top: 18px;
+    font-size: 14px;
+    margin-left: 0;
+    width: 100%;
+    min-width: 0;
+  }
+  .staff-card li {
+    width: 100%;
+  }
+  .staff-card_wrapper {
+    justify-content: space-between;
+    height: 100%;
+  }
+  .consultations {
+    background-size: contain, contain;
+    background-position-y: 105px, 178px;
+  }
+  .header-bottom_info__sale {
+    width: 70%;
+  }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767.98px) {
   .medical-care_heading,
   .grooming-heading,
   .staff-heading,
@@ -879,7 +935,7 @@ main {
     color: var(--text, #575757);
     font-size: 22px;
     font-style: normal;
-    font-weight: 500;
+    font-weight: 700;
     line-height: 120%;
     margin-bottom: 32px;
   }
@@ -910,6 +966,7 @@ main {
   }
   .services {
     width: 100%;
+    height: auto;
     margin-left: 0;
     margin-top: 8px;
     border-radius: 12px;
@@ -917,6 +974,10 @@ main {
   .services h3 {
     width: auto;
     margin-bottom: 72px;
+  }
+  .services-wrapper_accordion {
+    height: auto;
+    overflow: auto;
   }
   .services img {
     display: none;
@@ -926,9 +987,6 @@ main {
     width: 100%;
     margin-left: 0;
     margin-top: 8px;
-  }
-  .services-accordion_data {
-    margin: 0;
   }
   .consultations span {
     font-size: 22px;
@@ -959,6 +1017,7 @@ main {
   }
   .services-panel {
     width: 100%;
+    padding-left: 20px;
   }
   .services-panel p {
     width: 100%;
@@ -1005,6 +1064,7 @@ main {
   }
   .grooming-accordion_panel {
     padding-left: 18px;
+    margin-bottom: 0;
   }
   .grooming-accordion img {
     display: none;
@@ -1062,6 +1122,7 @@ main {
     font-size: 24px;
     font-weight: 600;
     width: 60%;
+    margin-bottom: 0;
   }
   .feedback-header_text {
     margin-top: 0;
@@ -1077,13 +1138,10 @@ main {
   }
   .swiper {
     display: none !important;
-    max-height: 252px;
+    max-height: 308px;
   }
   .swiper-mobile {
     display: block !important;
-  }
-  .swiper-slide {
-    width: 90% !important;
   }
   .swiper-slide_raiting {
     margin: 28px 0 0 21px;
@@ -1132,7 +1190,7 @@ main {
     left: 10px;
   }
   .swiper-pagination {
-    left: 270px !important;
+    left: 260px !important;
     bottom: 30px !important;
     width: auto !important;
   }
@@ -1149,13 +1207,22 @@ main {
     flex-direction: column;
     margin-top: 0;
   }
+  .faq-wrapper_img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 100%;
+  }
+  .faq-wrapper img {
+    width: 100%;
+    height: 100%;
+  }
   .faq-form_reptile {
     max-width: 370px;
     height: 404px;
   }
   .faq-accordion {
     width: 100%;
-    height: 370px;
     margin: 8px 0 0 0;
   }
   .faq-accordion img {
@@ -1172,7 +1239,7 @@ main {
     width: auto;
   }
   .contacts-header p {
-    max-width: 100%;
+    width: 100%;
   }
   .contacts-wrapper {
     display: flex;
@@ -1181,23 +1248,30 @@ main {
     height: auto;
     margin-top: 0;
     border: none;
-    background: url(/img/mob/contacts_bg.png) no-repeat top, var(--akcent, #20BBFE);
+    background: var(--akcent, #20BBFE);
     background-size: contain;
   }
   .contacts-wrapper_form {
-    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-left: 0;
   }
   .contacts-wrapper_form form {
     display: flex;
     flex-direction: column;
     align-items: center;
-    max-width: 100%;
+    width: 100%;
   }
   .contacts-wrapper_form__links {
     margin-top: 42px;
+    margin-left: 30px;
+    align-self: flex-start;
   }
   .contacts-wrapper_form p {
     margin: 0 0 17px 0;
+    align-self: start;
   }
   .contacts-wrapper form {
     margin-top: 26px;
