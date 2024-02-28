@@ -530,9 +530,14 @@ color: #ffffff;
     color: var(--white, #FFF);
 }
 
+.feedback-header_text a{
+    text-decoration: none;
+}
+
 .feedback-header_text p{
     cursor: pointer;
     color: var(--white, #FFF);
+    text-decoration: none;
 }
 
 .feedback-header_text svg{
